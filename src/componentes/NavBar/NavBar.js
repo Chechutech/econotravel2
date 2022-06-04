@@ -4,7 +4,7 @@ import { Box, AppBar,Toolbar, InputBase, Avatar, Stack } from
 '@mui/material';
 import logo3 from '../imagenes/logo3.png';
 import SearchIcon from '@mui/icons-material/Search';
-import gorila3 from '../imagenes/gorila3.png';
+import gorila4 from '../imagenes/gorila4.png';
 import cesta from '../imagenes/cesta.png';
 
 
@@ -31,7 +31,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  color:'primary',
+  color:'#4b7f55',
 }));
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
@@ -52,7 +52,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 const LogoBoxStyled = styled(Box)(({ theme }) => ({
- 
+ paddingTop:'5vh',
    
 }));
 function NavBar() {
@@ -62,7 +62,7 @@ function NavBar() {
           <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 
   'space-around' }}>
             <LogoBoxStyled>
-            <img src={logo3} alt='logo' sx={{width: 100, height: 100}}/>
+            <img src={logo3} alt='logo' />
             </LogoBoxStyled>
   
             <Search>
@@ -76,7 +76,7 @@ function NavBar() {
             </Search>
             <Stack direction="row" spacing={3}>
               <Avatar
-                alt="gorila" src={gorila3} sx={{ width: 70, height: 70 }} />
+                alt="gorila" src={gorila4} sx={{ width: 70, height: 70 }} />
               <Avatar
               alt="cesta" src={cesta} sx={{ width: 70, height: 70 }}/>
               </Stack>
