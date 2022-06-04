@@ -139,6 +139,47 @@
           "duracion": "Excursión larga"
         }
       ]
+    },
+    {
+      "id": 8,
+      "titulo": "Paseo en globo sobre Cataluña con servicio de recogida desde Barcelona",
+      "descripcion": "Vuele sobre el sublime paisaje de Cataluña cerca de Barcelona en esta excursión en globo por la mañana temprano. Maravíllate ante los hermosos lugares de interés como Montserrat y las montañas de los Pirineos mientras asciendes a alturas de hasta 3,000 pies (900 metros) durante tu vuelo de 1 a 1.5 horas. Luego regresa a la tierra para el brunch con vino espumoso. Su vuelo en globo aerostático también incluye un certificado, además de que puede realizar la actualización para un vuelo más largo de 2 horas o privado.",
+      "precio": "175€ por persona",
+      "duracion": "5h",
+      "img": "https://cdn.pixabay.com/photo/2015/11/06/15/25/hot-air-balloon-ride-1028896_960_720.jpg",
+      "accesibilidad": "Los niños de 5 años y menores no pueden abordar un globo aerostático. No recomendable para embarazadas. No está adaptado para personas en silla de ruedas. No es adecuado para viajeros con afecciones cardíacas u otros problemas médicos graves. Máximo 8 viajeros",
+      "etiquetas": [
+        {
+          "ubicacion": "Montaña"
+        },
+        {
+          "transporte": ["Bus","Globo"]
+        },
+        {
+          "duracion": "Excursión larga"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Viaje de 3 horas de viticultura y cata de vinos desde Barcelona",
+      "descripcion": "Mejora tu experiencia de los verdes viñedos que rodean Barcelona en un tour de 3 horas de vino por el Alt Penedés. Con un guía experimentado, disfrute de un recorrido completo por los viñedos y luego descienda a las bodegas atmosféricas en las que el vino envejece. Deleite su paladar con una selección de variedades cultivadas localmente mientras se deleita con productos españoles diseñados para complementar perfectamente los vinos. Tour de vino de 3 horas por la verde región vinícola del Alt Penedés desde Barcelona. Recorra los hermosos viñedos de la zona y conozca los complejos procesos de elaboración de vinos en las bodegas de la bodega.",
+      "precio": "50€ por persona",
+      "duracion": "3h",
+      "img": "https://cdn.pixabay.com/photo/2014/12/02/03/12/wineglass-553467__340.jpg",
+      "accesibilidad": "La edad mínima es 12 años. Está adaptado para personas en silla de ruedas. ",
+      "etiquetas": [
+        {
+          "ubicacion": "Montaña"
+        },
+        {
+          "transporte": "Bus"
+        },
+        {
+          "duracion": "Excursión corta"
+        }
+      ]
     }
+
   ]
 }
