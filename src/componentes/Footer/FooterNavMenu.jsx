@@ -26,17 +26,18 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
     return (
       <>
         <List sx={{ display:'flex', justifyContent:'space-evenly',paddingBottom: '1rem',paddingTop: '1rem', width: '100vw' }}>
-          <StyledListItem >
-              <StyledLink  variant="body1" >¿Cómo funciona?</StyledLink>
+          <StyledListItem sx={{  marginRight:'1rem'}}>
+            <StyledLink  variant="body1" >¿Cómo funciona?</StyledLink>
           </StyledListItem>
   
-          <StyledListItem>
+          <StyledListItem  sx={{  marginRight:'1rem'}}>
               <StyledLink  variant="body1" >¿Quienes somos?</StyledLink>
           </StyledListItem>
   
-          <StyledListItem>
+          <StyledListItem >
               <StyledLink  variant="body1" >Medios de pago</StyledLink>
           </StyledListItem>
+          
         </List>
       </>
     )
