@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
-import { Box, AppBar,Toolbar, InputBase, Avatar, Stack } from 
-'@mui/material';
-import logo3 from '../imagenes/logo3.png';
+import { Box, AppBar,Toolbar, InputBase, Stack, styled, alpha, } from '@mui/material';
+import logo4 from '../imagenes/logo4.png';
 import SearchIcon from '@mui/icons-material/Search';
 import gorila4 from '../imagenes/gorila4.png';
 import cesta from '../imagenes/cesta.png';
@@ -10,19 +8,48 @@ import cesta from '../imagenes/cesta.png';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
+  [theme.breakpoints.down('sm')]: {
+    marginLeft: '1.4rem',
+    marginRight: '1.4rem',
+  },
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.black, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
-  marginRight: theme.spacing(2),
+  
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
+    width: '35vw',
   },
 }));
+
+const StyledImgGor = styled('img')(({ theme }) => ({
+  paddingBottom: '0.7rem',
+  paddingTop: '0.5rem',
+  [theme.breakpoints.down('sm')]: {
+    height:'2.2rem',  
+  },
+  [theme.breakpoints.up('sm')]: {
+    height:'4rem',  
+  },
+
+}));
+const StyledImgCesta = styled('img')(({ theme }) => ({
+  paddingBottom: '0.7rem',
+  paddingTop: '0.5rem',
+  [theme.breakpoints.down('sm')]: {
+    height:'1.8rem',  
+  },
+  [theme.breakpoints.up('sm')]: {
+    height:'3rem',  
+  },
+
+}));
+
+
+
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
@@ -34,7 +61,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   color:'#4b7f55',
 }));
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
+  color: '#4b7f55',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
@@ -48,37 +75,31 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: '#fffafa',
-  height:'15vh',
 }));
 
-const LogoBoxStyled = styled(Box)(({ theme }) => ({
- paddingTop:'5vh',
-   
-}));
 function NavBar() {
+
     return (
       <Box sx={{ flexGrow: 1 }} >
-        <StyledAppBar position="static" elevation={0} >
-          <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 
+        <StyledAppBar position="fixed" elevation={0} >
+          <Toolbar  sx={{ display: 'flex', justifyContent: 
   'space-around' }}>
-            <LogoBoxStyled>
-            <img src={logo3} alt='logo' />
-            </LogoBoxStyled>
+            <Box  sx={{ display: 'flex', alignContent: 'center', alignItems: 'center'}}>
+            <img style={{height:'4rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' />
+            </Box>
   
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Search…"
+                placeholder="Buscar..."
                 inputProps={{ 'aria-label': 'search' }}
               />
             </Search>
-            <Stack direction="row" spacing={3}>
-              <Avatar
-                alt="gorila" src={gorila4} sx={{ width: 70, height: 70 }} />
-              <Avatar
-              alt="cesta" src={cesta} sx={{ width: 70, height: 70 }}/>
+            <Stack direction="row" spacing={2} sx={{ display: 'flex', alignItems:'center' }}>
+                <StyledImgGor alt="gorila" src={gorila4} />
+                <StyledImgCesta alt="cesta" src={cesta}  />
               </Stack>
             
          </Toolbar>
