@@ -52,15 +52,15 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 const LogoBoxStyled = styled(Box)(({ theme }) => ({
- paddingTop:'5vh',
+  paddingTop: '5vh',
+
    
 }));
 function NavBar() {
     return (
       <Box sx={{ flexGrow: 1 }} >
         <StyledAppBar position="static" elevation={0} >
-          <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 
-  'space-around' }}>
+          <Toolbar variant="dense" sx={{ display: 'flex', justifyContent:'space-around' }}>
             <LogoBoxStyled>
             <img src={logo3} alt='logo' />
             </LogoBoxStyled>
