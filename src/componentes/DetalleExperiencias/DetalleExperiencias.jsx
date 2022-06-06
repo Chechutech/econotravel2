@@ -1,26 +1,29 @@
 import {Box,Typography, styled} from '@mui/material'
 import data from '../db.json'
+import CajitaReserva from './CajitaReserva';
+import ImgYDescripcion from './ImgYDescripcion';
+
 
 const StyledTitulo = styled(Typography)(() => ({
     textAlign: 'start',
-    fontSize:'2rem',
+    fontSize:'1.8rem',
     color:'#4B7F55',
-    paddingTop: '3rem',
-    paddingLeft: '3rem',
+    marginTop: '8rem',
+    marginLeft: '3rem',
     fontWeight: 'bold',
   }));
 
 
-const Experiencia4 = ({i}) => {
+const DetalleExperiencias = ({i}) => {
     return ( 
         <Box>
             <StyledTitulo variant="h1">{data.experiencias[i].titulo}</StyledTitulo>
-
-
-
-
+            <Box sx={{display:'flex'}}>
+                <ImgYDescripcion i={i}/>
+                <CajitaReserva i={i}/>
+            </Box>
         </Box>
      );
 }
  
-export default Experiencia4;
+export default DetalleExperiencias;
