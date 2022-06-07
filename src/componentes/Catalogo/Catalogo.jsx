@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@mui/material/styles';
-import catalogo from '../db.json';
+import catalogo from '../experiencias.json';
 import { Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
 
  const Item = styled(Paper)(({ theme }) => ({

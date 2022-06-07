@@ -7,13 +7,10 @@ function FiltroUbicacion() {
 
   return (
     
-    <div className="filtro-ubicacion">
+    <box>
         <Typography variant="h1" color="primary">
-          Ubicación
-          Medio de transporte
-          Duración
         </Typography>
-    </div>
+    </box>
   );
 }
 
