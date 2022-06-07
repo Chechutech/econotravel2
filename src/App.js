@@ -1,15 +1,24 @@
 import './App.css';
 import Footer from './componentes/Footer/Footer';
 import NavBar from './componentes/NavBar/NavBar';
-import Catalogo from './componentes/Catalogo/Catalogo';
+import theme from './componentes/Styles/Theme';
+import DetalleExperiencias from './componentes/DetalleExperiencias/DetalleExperiencias';
+import "@fontsource/roboto-mono";
+import { ThemeProvider } from '@mui/material';
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <Catalogo/>
-      <Footer/>
+      <ThemeProvider theme={theme}>
+        <NavBar/>
+        
+        <Footer/>
+      </ThemeProvider>
+      
+      
     </div>
   );
 }

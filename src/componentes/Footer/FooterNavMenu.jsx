@@ -28,8 +28,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
     textDecoration: 'none',
     fontWeight: 'bold',
     color:"black",
-    fontSize: '0.9rem'
-  
+    fontSize: '0.9rem',
   }));
   
   
