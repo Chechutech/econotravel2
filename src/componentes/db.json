@@ -1,5 +1,4 @@
-{
-  "experiencias": [
+[
     {
       "id": 1,
       "titulo": "Paseo en bicicleta por el Montseny",
@@ -182,4 +181,3 @@
     }
 
   ]
-}
