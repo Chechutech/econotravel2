@@ -14,8 +14,8 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
-        <Catalogo/>
-         {/* <DetalleExperiencias i='4'/>  */}
+        {/* <Catalogo/> */}
+         <DetalleExperiencias i='4'/> 
         <Footer/>
       </ThemeProvider>
       
