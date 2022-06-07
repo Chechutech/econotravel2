@@ -18,18 +18,19 @@ import { Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Containe
 }));
 
 
-function Catalogo() {
+const Catalogo = ({i}) => {
     console.log(catalogo);
-    return (
+  return (
+      
         <StyledContainer>
         <Grid container spacing={4}>
             <Grid item xs={12} sm={6} md={4}>
                 <Card  sx={{ maxWidth: 285}} >
-                     <CardMedia
-                            component="img"
-                            height="381"
-                            alt="bici montaña"
-                            image={catalogo && catalogo[0].img} />
+              
+              <CardMedia
+              height="381">
+              <img />
+            </CardMedia>
                  <CardContent>        
              <Stack direction="row" spacing={1}>
                  <Item>Chip One</Item>
@@ -37,7 +38,7 @@ function Catalogo() {
                   <Item>Chip One</Item>
                 </Stack> 
               <CardActions style={{justifyContent:"space-between"}} > 
-                <Typography style={{fontSize:"0.8rem", color:"#4b7f55", fontWeight:"bold"}} >{catalogo && catalogo[0].etiquetas[0].ubicacion}
+                  <Typography style={{ fontSize: "0.8rem", color: "#4b7f55", fontWeight: "bold" }} >dddd
                 <Typography style={{fontSize:"0.7rem", color:"#2f2f2f"}} >
                 {catalogo && catalogo[0].precio}
                   </Typography>
@@ -49,7 +50,7 @@ function Catalogo() {
               </Grid>
          
          
-          <Grid item xs={12} sm={6} md={4}>
+          { /* <Grid item xs={12} sm={6} md={4}>
            <Card  sx={{ maxWidth: 285 }} >
             <CardMedia
                        component="img"
@@ -256,7 +257,7 @@ function Catalogo() {
               </CardActions>           
               </CardContent>
                   </Card>   
-              </Grid>                                     
+              </Grid>  */}                                   
          </Grid>
    </StyledContainer>
       
