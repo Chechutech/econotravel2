@@ -5,7 +5,8 @@ import theme from './componentes/Styles/Theme';
 import DetalleExperiencias from './componentes/DetalleExperiencias/DetalleExperiencias';
 import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
-import Catalogo from './componentes/Catalogo/Catalogo'
+import Catalogo from './componentes/Catalogo/Catalogo';
+import Filtro from './componentes/Filtros/Filtro';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <NavBar/>
         {/* <Catalogo/> */}
         {/* <DetalleExperiencias i='4'/> */}
+        <Filtro/>
         <Footer/>
       </ThemeProvider>
       
