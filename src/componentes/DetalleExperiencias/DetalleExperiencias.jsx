@@ -1,7 +1,6 @@
 import {Box,Typography, styled} from '@mui/material'
 import data from '../experiencias.json'
-import CajitaReserva from './CajitaReserva';
-import ImgYDescripcion from './ImgYDescripcion';
+import Contenido from './Contenido';
 
 
 const StyledTitulo = styled(Typography)(() => ({
@@ -19,8 +18,7 @@ const DetalleExperiencias = ({i}) => {
         <Box>
             <StyledTitulo variant="h1">{data[i].titulo}</StyledTitulo>
             <Box sx={{display:'flex'}}>
-                <ImgYDescripcion i={i}/>
-                <CajitaReserva i={i}/>
+                <Contenido i={i}/>
             </Box>
         </Box>
      );
