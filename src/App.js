@@ -1,4 +1,3 @@
-import './App.css';
 import Footer from './componentes/Footer/Footer';
 import NavBar from './componentes/NavBar/NavBar';
 import theme from './componentes/Styles/Theme';
@@ -15,8 +14,8 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
-        {/* <Catalogo/> */}
-        {/* <DetalleExperiencias i='4'/> */}
+        <Catalogo/>
+         {/* <DetalleExperiencias i='4'/>  */}
         <Footer/>
       </ThemeProvider>
       
