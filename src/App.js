@@ -5,15 +5,17 @@ import DetalleExperiencias from './componentes/DetalleExperiencias/DetalleExperi
 import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
+import Filtro from './componentes/Filtros/Filtro';
 
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
+        <Filtro/>
         <Catalogo/>
          {/* <DetalleExperiencias i='4'/>  */}
-        <Footer/>
+         <Footer/>
       </ThemeProvider>
       
       
