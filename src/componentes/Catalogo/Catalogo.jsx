@@ -9,28 +9,36 @@ const Item = styled(Paper)(({ theme }) => ({
     color: "#4B7F55",
   }));
    const StyledContainer = styled(Container)(({ theme }) => ({
-     paddingTop: theme.spacing(6),
+     paddingTop: theme.spacing(30),
      paddingBottom: theme.spacing(6),
      maxWidth: "lg",
-    backgroundColor:"#FFFAFA",
-  }));
-  function Catalogo() {
+     backgroundColor: "#FFFAFA",
+     display: "flex",
+     flexWrap: "wrap",
+     justifyContent:"space-around",
+    
+   }));
+  
+   console.log(catalogo);
+function Catalogo() {
+  
       return (
           <StyledContainer>
-             {catalogo.map((exp, index) => (
-          <Grid key={index} container spacing={4}>
-              <Grid item xs={12} sm={6} md={4}>
-                  <Card  sx={{ maxWidth: 285}} >
-                       <CardMedia
+            <Grid container spacing={10}>
+               {catalogo.map((exp, index) => (
+                 <Grid key={index} item xs={12} sm={6} md={4}>
+                  <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
+                   <CardMedia
                               component="img"
-                              height="381"
-                              alt="bici montaña"
+                               height="381"
+                               alt="bici montaña"
                               image={exp.img} />
-                   <CardContent>
+                     <CardContent>
+                     <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>{exp.titulo}</Typography>  
                <Stack direction="row" spacing={1}>
-                   <Item>Chip One1</Item>
+                   <Item>Chip One</Item>
                     <Item>Chip One</Item>
-                    <Item>Chip One2</Item>
+                    <Item>Chip One</Item>
                   </Stack>
                 <CardActions style={{justifyContent:"space-between"}} >
                   <Typography style={{fontSize:"0.8rem", color:"#4B7F55", fontWeight:"bold"}} >{exp.etiquetas[0].ubicacion}
@@ -42,9 +50,10 @@ const Item = styled(Paper)(({ theme }) => ({
                    </CardActions>
                   </CardContent>
                        </Card>
-                </Grid>
+                 </Grid>
+                 ))}
            </Grid>
-            ))}
+           
      </StyledContainer>
       )
   }
