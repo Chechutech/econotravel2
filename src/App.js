@@ -14,13 +14,8 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
-<<<<<<< HEAD
          <Catalogo/> 
         {/* <DetalleExperiencias i='4'/> */}
-=======
-        <Catalogo/>
-         {/* <DetalleExperiencias i='4'/>  */}
->>>>>>> 0a715af465ced638013b6c7a0ea55ee738da97ed
         <Footer/>
       </ThemeProvider>
       
