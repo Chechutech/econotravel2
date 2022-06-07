@@ -31,11 +31,11 @@ function Catalogo() {
                             alt="bici montaña"
                             image={catalogo && catalogo[0].img} />
                  <CardContent>        
-             <Stack direction="row" spacing={1}>
-                 <Item>Chip One</Item>
+              <Stack direction="row" spacing={1}>
                   <Item>Chip One</Item>
                   <Item>Chip One</Item>
-                </Stack> 
+                  <Item>Chip One</Item>
+              </Stack> 
               <CardActions style={{justifyContent:"space-between"}} > 
                 <Typography style={{fontSize:"0.8rem", color:"#4b7f55", fontWeight:"bold"}} >{catalogo && catalogo[0].etiquetas[0].ubicacion}
                 <Typography style={{fontSize:"0.7rem", color:"#2f2f2f"}} >
