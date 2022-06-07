@@ -16,8 +16,8 @@ function Transporte() {
             <Button style = {{fontSize:"0.8rem", textTransform: 'capitalize',color:"#2f2f2f", fontWeight:"bold"}}id="basic-button" aria-controls={open ? 'basic-menu' : undefined} aria-haspopup="true" aria-expanded={open ? 'true' : undefined} onClick={handleClick}>Medio de Transporte</Button>
                 <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{ 'aria-labelledby': 'basic-button',}}>
                     <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>A pie</MenuItem>
-                    <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Bus</MenuItem>
                     <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Barco</MenuItem>
+                    <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Bus</MenuItem>
                     <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Globo</MenuItem>
                 </Menu>
         </Box>
