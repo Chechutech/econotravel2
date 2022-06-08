@@ -12,10 +12,16 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
+<<<<<<< HEAD
         <Filtro/>
         <Catalogo/>
          {/* <DetalleExperiencias i='4'/>  */}
          <Footer/>
+=======
+         {/* <Catalogo/>  */}
+        {<DetalleExperiencias i='4'/>}
+        <Footer/>
+>>>>>>> 8aca28d0559c2e27bb7d8cfbbeb6f0f15b315339
       </ThemeProvider>
       
       

@@ -1,24 +1,26 @@
 import {Box,Typography, styled} from '@mui/material'
 import data from '../experiencias.json'
-import Contenido from './Contenido';
+import ContenidoDetExp from './ContenidoDetExp';
+import Breadcrums from './Breadcrums';
 
 
-const StyledTitulo = styled(Typography)(() => ({
-    textAlign: 'start',
+const StyledTitulo = styled(Typography)(({theme}) => ({
+    marginBottom:'4rem',
     fontSize:'1.8rem',
     color:'#4B7F55',
-    marginTop: '8rem',
-    marginLeft: '3rem',
     fontWeight: 'bold',
+    marginTop:'3rem'
+    
   }));
 
 
 const DetalleExperiencias = ({i}) => {
     return ( 
-        <Box>
+        <Box sx={{display:'flex',  flexDirection:'column', alignItems:'center',}}>
+            <Breadcrums/>
             <StyledTitulo variant="h1">{data[i].titulo}</StyledTitulo>
-            <Box sx={{display:'flex'}}>
-                <Contenido i={i}/>
+            <Box sx={{  }}>
+                <ContenidoDetExp i={i}/>
             </Box>
         </Box>
      );
