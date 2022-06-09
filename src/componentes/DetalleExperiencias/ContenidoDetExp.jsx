@@ -17,13 +17,27 @@ const ResponsiveBox = styled(Box)(({theme}) => ({
     }, 
   }));
 
+  const StyledImg = styled('img')(({ theme }) => ({
+
+    [theme.breakpoints.down('sm')]: {
+        height:'42vh',  
+    },
+    [theme.breakpoints.up('sm')]: {
+        height:'36vh',  
+    },
+     [theme.breakpoints.up('xl')]: {
+        height:'42vh', 
+    },
+  
+  }));
+
 
 
 
 const ContenidoDetExp = ({i}) => {
     return ( 
     <ResponsiveBox sx={{}}>
-        <img src={data[i].img} alt="" style={{height: '42vh', }} />
+        <StyledImg src={data[i].img} alt=""  />
         <ReadMore >
             {data[i].descripcion} 
         </ReadMore>

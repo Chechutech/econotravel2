@@ -14,7 +14,7 @@ const StyledFooter = styled(AppBar)(({ theme }) => ({
 
 const Footer = () => {
     return ( 
-        <StyledFooter position="fixed">
+        <StyledFooter position="static">
           <Toolbar >
             <FooterNavMenu />
           </Toolbar>
