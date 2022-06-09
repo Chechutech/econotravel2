@@ -49,7 +49,7 @@
       "accesibilidad": "Actividad disponible para todas las edades. Accesibilidad garantizada para sillas de ruedas.",
       "etiquetas": [
         {
-          "ubicación": "Ciudad"
+          "ubicacion": "Ciudad"
         },
         {
           "transporte": "A pie"
@@ -141,7 +141,7 @@
     },
     {
       "id": 8,
-      "titulo": "Paseo en globo sobre Cataluña con servicio de recogida desde Barcelona",
+      "titulo": "Paseo en globo sobre Cataluña ",
       "descripcion": "Vuele sobre el sublime paisaje de Cataluña cerca de Barcelona en esta excursión en globo por la mañana temprano. Maravíllate ante los hermosos lugares de interés como Montserrat y las montañas de los Pirineos mientras asciendes a alturas de hasta 3,000 pies (900 metros) durante tu vuelo de 1 a 1.5 horas. Luego regresa a la tierra para el brunch con vino espumoso. Su vuelo en globo aerostático también incluye un certificado, además de que puede realizar la actualización para un vuelo más largo de 2 horas o privado.",
       "precio": "175",
       "duracion": "5h",
@@ -179,5 +179,4 @@
         }
       ]
     }
-
-  ]
+]

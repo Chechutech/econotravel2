@@ -6,6 +6,7 @@ import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo'
 import Home from './componentes/Home/Home';
+import Filtro from './componentes/Filtros/Filtro'
 
 
 
@@ -15,8 +16,10 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar/>
-         {/* <Catalogo/>  */}
-        {/* <DetalleExperiencias i='4'/> */}
+        <Filtro/>
+        <Catalogo/>
+         {/* <DetalleExperiencias i='4'/>  */}
+         
         <Home/>
         <Footer/>
       </ThemeProvider>
