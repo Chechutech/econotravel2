@@ -43,7 +43,7 @@ function Catalogo() {
                 <CardActions style={{justifyContent:"space-between"}} >
                   <Typography style={{fontSize:"0.8rem", color:"#4B7F55", fontWeight:"bold"}} >{exp.etiquetas[0].ubicacion}
                   <Typography style={{fontSize:"0.7rem", color:"#2F2F2F"}} >
-                  {exp.precio}
+                  {exp.precio}€ Por persona
                     </Typography>
                   </Typography>
                 <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button>
