@@ -5,6 +5,7 @@ import DetalleExperiencias from './componentes/DetalleExperiencias/DetalleExperi
 import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo'
+import Home from './componentes/Home/Home';
 
 
 
@@ -15,7 +16,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <NavBar/>
          {/* <Catalogo/>  */}
-        {<DetalleExperiencias i='4'/>}
+        {/* <DetalleExperiencias i='4'/> */}
+        <Home/>
         <Footer/>
       </ThemeProvider>
       
