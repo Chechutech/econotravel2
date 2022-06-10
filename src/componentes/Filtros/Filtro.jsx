@@ -1,7 +1,5 @@
 import * as React from 'react';
-import Ubicacion from './DropdownUbicacion';
-import Transporte from './DropdownTransporte';
-import Duracion from './DropdownDuracion';
+import FiltroUbicacion from './FiltroUbicacion';
 import {Box, Typography} from '@mui/material';
     
     function Filtro() {
@@ -13,9 +11,7 @@ import {Box, Typography} from '@mui/material';
           Experiencias en el área de Barcelona
       </Typography>
       <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center', padding: '0.8rem', margin: '0.5rem'}}>
-        <Ubicacion/>
-        <Transporte/>
-        <Duracion/>
+          <FiltroUbicacion/>
       </Box>
       </Box>
       </>)
