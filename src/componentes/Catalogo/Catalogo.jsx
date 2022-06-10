@@ -10,7 +10,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: "#4B7F55",
   }));
    const StyledContainer = styled(Container)(({ theme }) => ({
-     paddingTop: theme.spacing(30),
+     paddingTop: theme.spacing(2),
      paddingBottom: theme.spacing(6),
      maxWidth: "lg",
      backgroundColor: "#FFFAFA",
@@ -20,8 +20,8 @@ const Item = styled(Paper)(({ theme }) => ({
     
    }));
   
-   console.log(catalogo);
-function Catalogo() {
+   
+function Catalogo({ catalogo }) {
   
       return (
           <StyledContainer>
@@ -31,7 +31,7 @@ function Catalogo() {
                   <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
                    <CardMedia
                               component="img"
-                               height="381"
+                               height="370"
                                alt="bici montaña"
                               image={exp.img} />
                      <CardContent>

@@ -77,7 +77,8 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: '#fffafa',
 }));
 
-function NavBar() {
+function NavBar({searcher}) {
+  
 
     return (
       <Box sx={{ flexGrow: 1 }} >
@@ -92,7 +93,7 @@ function NavBar() {
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase
+              <StyledInputBase  onChange={searcher}
                 placeholder="Buscar..."
                 inputProps={{ 'aria-label': 'search' }}
               />
