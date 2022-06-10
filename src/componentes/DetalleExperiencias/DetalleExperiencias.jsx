@@ -5,11 +5,20 @@ import Breadcrums from './Breadcrums';
 
 
 const StyledTitulo = styled(Typography)(({theme}) => ({
-    marginBottom:'4rem',
+   
     fontSize:'1.8rem',
     color:'#4B7F55',
     fontWeight: 'bold',
-    marginTop:'3rem'
+    marginTop:'3rem',
+    [theme.breakpoints.down('sm')]: {
+         
+    },
+    [theme.breakpoints.up('sm')]: {
+        marginBottom:'2rem',   
+    },
+     [theme.breakpoints.up('xl')]: {
+        marginBottom:'4rem',
+    },
     
   }));
 
@@ -28,3 +37,14 @@ const DetalleExperiencias = ({i}) => {
 
  
 export default DetalleExperiencias;
+
+
+// [theme.breakpoints.down('sm')]: {
+   
+// },
+// [theme.breakpoints.up('sm')]: {
+    
+// },
+// [theme.breakpoints.up('xl')]: {
+    
+//     },
