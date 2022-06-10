@@ -3,7 +3,7 @@ import {Button, Box, Menu, MenuItem} from '@mui/material';
 
 
     
-function Duracion () {
+function DropdownDuracion () {
       const [anchorEl, setAnchorEl] = React.useState(null);
       const open = Boolean(anchorEl);
       const handleClick = (event) => {
@@ -33,4 +33,4 @@ function Duracion () {
         </Box>
       );
     }
-export default Duracion;
+export default DropdownDuracion;

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Ubicacion from './Ubicacion';
-import Transporte from './Transporte';
-import Duracion from './Duracion';
+import Ubicacion from './DropdownUbicacion';
+import Transporte from './DropdownTransporte';
+import Duracion from './DropdownDuracion';
 import {Box, Typography} from '@mui/material';
     
     function Filtro() {
