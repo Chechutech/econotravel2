@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Button, Box, Menu, MenuItem} from '@mui/material';
     
-function Ubicacion() {
+function DropdownUbicacion() {
       const [anchorEl, setAnchorEl] = React.useState(null);
       const open = Boolean(anchorEl);
       const handleClick = (event) => {
@@ -22,4 +22,4 @@ function Ubicacion() {
         </Box>
       );
     }
-export default Ubicacion;
+export default DropdownUbicacion;

@@ -27,7 +27,7 @@ const filterCatalogo = catalogo.filter((card) => {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar searcher={searchers} />
-        <Filtro/>
+        {/*<Filtro/>*/}
         <Catalogo catalogo={filterCatalogo}/>
          {/* <DetalleExperiencias i='4'/>  */}
         <Home/>
