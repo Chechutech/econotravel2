@@ -9,7 +9,7 @@ const Item2 = styled(Paper)(({ theme }) => ({
   }));
 
   const StyledContainer = styled(Container)(({ theme }) => ({
-    paddingTop: theme.spacing(30),
+    paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(6),
     maxWidth: "lg",
     backgroundColor: "#FFFAFA",
@@ -18,20 +18,24 @@ const Item2 = styled(Paper)(({ theme }) => ({
     justifyContent:"space-around",
   }));
 
-const ExpDestacadas = () => {
-    const array= data.slice(0,3)
+const ExpDestacadas = ({id, id2, id3}) => {
+    const exp1= data.filter(exp=> exp.id == id)
+    const exp2= data.filter(exp=> exp.id==id2)
+    const exp3= data.filter(exp=> exp.id==id3)
+    const array=[...exp1,...exp2,...exp3]
     console.log(array)
     return (  
     <>
+    <Typography variant="h1" style={{fontSize:'2rem', textAlign:'center', fontWeight:'bold', color:'#DE541E'}} >EXPERIENCIAS DESTACADAS</Typography>
     <StyledContainer > 
     
-          <Grid  container spacing={14} >
+          <Grid  container spacing={10} >
           {array.map((exp, index) => (
-              <Grid key={index} item xs={12} sm={6} md={4}>
-                  <Card  sx={{ maxWidth: 285}} >
+              <Grid key={index} item xs={12} sm={6} md={4} style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+                  <Card   >
                        <CardMedia
                               component="img"
-                              height="370"
+                              height="270"
                               alt="bici montaña"
                               image={exp.img} />
                    <CardContent>

@@ -4,6 +4,8 @@ import logo4 from '../imagenes/logo4.png';
 import SearchIcon from '@mui/icons-material/Search';
 import gorila4 from '../imagenes/gorila4a.png';
 import cesta from '../imagenes/cesta.png';
+import CardTravelIcon from '@mui/icons-material/CardTravel';
+import PersonIcon from '@mui/icons-material/Person';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -36,14 +38,27 @@ const StyledImgGor = styled('img')(({ theme }) => ({
   },
 
 }));
-const StyledImgCesta = styled('img')(({ theme }) => ({
+const StyledIcon = styled(CardTravelIcon)(({ theme }) => ({
   paddingBottom: '0.7rem',
   paddingTop: '0.5rem',
+  color: '#4b7f55',
   [theme.breakpoints.down('sm')]: {
-    height:'1.8rem',  
+   
   },
   [theme.breakpoints.up('sm')]: {
-    height:'3rem',  
+    fontSize: 50,  
+  },
+
+}));
+const StyledIcon2 = styled(PersonIcon)(({ theme }) => ({
+  paddingBottom: '0.7rem',
+  paddingTop: '0.5rem',
+  color: '#4b7f55',
+  [theme.breakpoints.down('sm')]: {
+   
+  },
+  [theme.breakpoints.up('sm')]: {
+    fontSize: 50,  
   },
 
 }));
@@ -99,8 +114,8 @@ function NavBar({searcher}) {
               />
             </Search>
             <Stack direction="row" spacing={2} sx={{ display: 'flex', alignItems:'center' }}>
-                <StyledImgGor alt="gorila" src={gorila4} />
-                <StyledImgCesta alt="cesta" src={cesta}  />
+                <StyledIcon2 />
+                <StyledIcon sx={{ }}/>
               </Stack>
             
          </Toolbar>

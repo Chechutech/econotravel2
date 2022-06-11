@@ -28,7 +28,7 @@ const filterCatalogo = catalogo.filter((card) => {
       <ThemeProvider theme={theme}>
         <NavBar searcher={searchers} />
         {/*<Filtro/>*/}
-        <Catalogo catalogo={filterCatalogo}/>
+        {/* <Catalogo catalogo={filterCatalogo}/> */}
          {/* <DetalleExperiencias i='4'/>  */}
         <Home/>
         <Footer/>
