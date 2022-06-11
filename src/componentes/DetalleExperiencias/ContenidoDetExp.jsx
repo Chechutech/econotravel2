@@ -2,6 +2,7 @@ import { Box, theme, styled } from "@mui/material";
 import data from '../experiencias.json'
 import ReadMore from "./ReadMore";
 import CajitaReserva from './CajitaReserva';
+import { useParams } from "react-router-dom";
 
 
 const ResponsiveBox = styled(Box)(({theme}) => ({
@@ -34,7 +35,8 @@ const ResponsiveBox = styled(Box)(({theme}) => ({
 
 
 
-const ContenidoDetExp = ({i}) => {
+const ContenidoDetExp = ({ i }) => {
+
     return ( 
     <ResponsiveBox sx={{}}>
         <StyledImg src={data[i].img} alt=""  />

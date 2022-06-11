@@ -1,4 +1,5 @@
-import {Box,Typography, styled} from '@mui/material'
+import { Box, Typography, styled } from '@mui/material'
+import { Outlet} from 'react-router-dom'
 import data from '../experiencias.json'
 import ContenidoDetExp from './ContenidoDetExp';
 import Breadcrums from './Breadcrums';
@@ -24,14 +25,20 @@ const StyledTitulo = styled(Typography)(({theme}) => ({
 
 
 const DetalleExperiencias = ({i}) => {
+   
+    
     return ( 
+        <>
         <Box sx={{display:'flex',  flexDirection:'column', alignItems:'center',}}>
-            <Breadcrums/>
+                <Breadcrums />
+                
             <StyledTitulo variant="h1">{data[i].titulo}</StyledTitulo>
-            <Box sx={{  }}>
+            <Box sx={{}}>
                 <ContenidoDetExp i={i}/>
             </Box>
-        </Box>
+            </Box>
+            <Outlet/>
+            </>   
      );
 }
 

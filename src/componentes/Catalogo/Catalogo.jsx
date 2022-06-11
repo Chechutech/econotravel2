@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link, Outlet,} from 'react-router-dom'
 import { styled } from '@mui/material/styles';
 import catalogo from '../experiencias.json';
 import { Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
@@ -23,19 +24,22 @@ const Item = styled(Paper)(({ theme }) => ({
    
 function Catalogo({ catalogo }) {
   
-      return (
+  
+
+  return (
+        <>
           <StyledContainer>
             <Grid container spacing={10}>
                {catalogo.map((exp, index) => (
                  <Grid key={index} item xs={12} sm={6} md={4}>
                   <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
-                   <CardMedia
+                    <CardMedia
                               component="img"
                                height="370"
                                alt="bici montaña"
                               image={exp.img} />
                      <CardContent>
-                     <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>{exp.titulo}</Typography>  
+                     <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}> <Link to={`/cartas/${exp.titulo}`}> {exp.titulo}</Link> </Typography>  
                <Stack direction="row" spacing={1}>
                    <Item>Chip One</Item>
                     <Item>Chip One</Item>
@@ -54,8 +58,9 @@ function Catalogo({ catalogo }) {
                  </Grid>
                  ))}
            </Grid>
-           
-     </StyledContainer>
+             </StyledContainer>
+      <Outlet/>
+   </>
       )
   }
   export default Catalogo

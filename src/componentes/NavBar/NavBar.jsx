@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Box, AppBar,Toolbar, InputBase, Stack, styled, alpha, } from '@mui/material';
+import { Box, AppBar, Toolbar, InputBase, Stack, styled, alpha, } from '@mui/material';
+import { Link, Outlet } from 'react-router-dom'
 import logo4 from '../imagenes/logo4.png';
 import SearchIcon from '@mui/icons-material/Search';
 import gorila4 from '../imagenes/gorila4a.png';
@@ -85,27 +86,31 @@ function NavBar({searcher}) {
         <StyledAppBar position="fixed" elevation={0} >
           <Toolbar  sx={{ display: 'flex', justifyContent: 
   'space-around' }}>
-            <Box  sx={{ display: 'flex', alignContent: 'center', alignItems: 'center'}}>
-            <img style={{height:'4rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' />
+            <Box  sx={{ display: 'flex', alignContent: 'center', alignItems: 'center'}}><Link to='/'> 
+            <img style={{height:'4rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' /> </Link>
             </Box>
   
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase  onChange={searcher}
+              <Link to='/cartas'> 
+              <StyledInputBase onChange={searcher}
                 placeholder="Buscar..."
                 inputProps={{ 'aria-label': 'search' }}
-              />
+                /></Link>
+               
             </Search>
             <Stack direction="row" spacing={2} sx={{ display: 'flex', alignItems:'center' }}>
-                <StyledImgGor alt="gorila" src={gorila4} />
-                <StyledImgCesta alt="cesta" src={cesta}  />
+            <StyledImgGor alt="gorila" src={gorila4} />
+               <StyledImgCesta alt="cesta" src={cesta}  />
               </Stack>
             
          </Toolbar>
         </StyledAppBar>
+        <Outlet/>
       </Box>
+     
     );
   }
   export default NavBar
