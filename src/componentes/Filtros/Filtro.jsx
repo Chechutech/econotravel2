@@ -6,7 +6,7 @@ import {Box, Typography} from '@mui/material';
     
       return (
       <>
-      <Box sx={{ height: '24rem', display:'flex', flexDirection:'column', justifyContent:'center'}}>
+      <Box sx={{ height: '400vh', display:'flex', flexDirection:'column', justifyContent:'center'}}>
       <Typography variant="h4" fontSize="1.8rem" textAlign= "center" color="#4B7F55">
           Experiencias en el área de Barcelona
       </Typography>

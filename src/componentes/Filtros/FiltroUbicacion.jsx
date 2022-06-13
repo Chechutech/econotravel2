@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import Catalogo from '../Catalogo/Catalogo';
 import Experiencias from '../experiencias.json';
 import { styled } from '@mui/material/styles';
-import { Box, Menu, MenuItem, Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
+import { Box, Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -50,57 +50,51 @@ function FiltroUbicacion (Catalogo) {
     const filteredData = filterByExp(Experiencias);
     setFilteredList(filteredData);
   }, [selectedExp]);
-
-  
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
   
     return (
       <>
-      <Box sx={{display:'flex', flexDirection:'row', justifyContent:'center'}}>
+      <Container maxWidth="sm">
+      
+        <Box className='dropdown'
+        sx={{display:'flex', flexDirection:'column', justifyContent:'center', margin: '0.5rem'}}
+        >
+          <Typography>Ubicación</Typography>
+ 
+          <select id="ubi-input" value={selectedExp} onChange={handleExpChange}>
+            <option value="Ciudad">Ciudad</option>
+            <option value="Montaña">Montaña</option>
+            <option value="Playa">Playa</option>
+          </select>
+        </Box>
 
-          <Button style = {{fontSize:"0.8rem", textTransform:"capitalize",color:"#2f2f2f", fontWeight:"bold"}} id="basic-button" value ={selectedExp} onChange={handleExpChange} onClick={handleClick}>Ubicación</Button>
-              <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} 
-              MenuListProps={{ 'aria-labelledby': 'basic-button',}}>
-                    <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Ciudad</MenuItem>
-                    <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Montaña</MenuItem>
-                    <MenuItem style= {{fontSize:"0.8rem", color:"#2f2f2f", fontWeight:"bold"}} onClick={handleClose}>Playa</MenuItem>
-              </Menu>
-      </Box>
-      <Box className='exp-list'>
-      <Grid container spacing={10}>
-      {filteredList.map((exp, index) => (
-        <Grid key={index} item xs={12} sm={6} md={4}>
-         <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
-          <CardMedia component="img" height="381" alt="bici montaña" image={exp.img} />
-            <CardContent>
-            <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>{exp.titulo}</Typography>  
-      <Stack direction="row" spacing={1}>
-           <Item>Chip One</Item>
-           <Item>Chip One</Item>
-           <Item>Chip One</Item>
-         </Stack>
-       <CardActions style={{justifyContent:"space-between"}} >
-         <Typography style={{fontSize:"0.8rem", color:"#4B7F55", fontWeight:"bold"}} >{exp.etiquetas[0].ubicacion}
-         <Typography style={{fontSize:"0.7rem", color:"#2F2F2F"}} >
-         {exp.precio}€ Por persona
-           </Typography>
-         </Typography>
-       <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button>
-          </CardActions>
-         </CardContent>
-              </Card>
-        </Grid>
-        ))}
-      </Grid>
-    </Box>
+        <Box className='grid-exp'>
+          <Grid container spacing={10}>
+          {filteredList.map((exp, index) => (
+            <Grid key={index} item xs={12} sm={6} md={4}>
+            <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
+              <CardMedia component="img" height="381" alt="bici montaña" image={exp.img} />
+                <CardContent>
+                <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>{exp.titulo}</Typography>  
+            <Stack direction="row" spacing={1}>
+              <Item>Chip One</Item>
+              <Item>Chip One</Item>
+              <Item>Chip One</Item>
+            </Stack>
+            <CardActions style={{justifyContent:"space-between"}} >
+            <Typography style={{fontSize:"0.8rem", color:"#4B7F55", fontWeight:"bold"}} >{exp.etiquetas[0].ubicacion}
+            <Typography style={{fontSize:"0.7rem", color:"#2F2F2F"}} >
+            {exp.precio}€ Por persona
+            </Typography>
+            </Typography>
+          <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button>
+              </CardActions>
+            </CardContent>
+                  </Card>
+            </Grid>
+            ))}
+          </Grid>
+          </Box>
+      </Container>
     </>
-  )
-}
+)}
 export default FiltroUbicacion

@@ -7,8 +7,9 @@ import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo'
 import Home from './componentes/Home/Home';
-import Filtro from './componentes/Filtros/Filtro'
-import catalogo from './componentes/experiencias.json'
+import Filtro from './componentes/Filtros/Filtro';
+import catalogo from './componentes/experiencias.json';
+import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 
 function App() {
   const [search, setSearch] = useState('')
@@ -27,13 +28,16 @@ const filterCatalogo = catalogo.filter((card) => {
     <div className="App">
       <ThemeProvider theme={theme}>
         <NavBar searcher={searchers} />
-        {/*<Filtro/>*/}
-        <Catalogo catalogo={filterCatalogo}/>
-         {/* <DetalleExperiencias i='4'/>  */}
-        <Home/>
-        <Footer/>
+
+      <Filtro/>
+      <InfoEmpresa/>
       </ThemeProvider>
     </div>
   );
 }
 export default App;
+
+{/*<Catalogo catalogo={filterCatalogo}></Catalogo>
+<DetalleExperiencias i='4'/>
+<Home/>
+<Footer/>*/}
