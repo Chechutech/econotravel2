@@ -53,7 +53,7 @@ function FiltroUbicacion (Catalogo) {
   
     return (
       <>
-      <Container maxWidth="sm">
+      <Container maxWidth="lg">
       
         <Box className='dropdown'
         sx={{display:'flex', flexDirection:'column', justifyContent:'center', margin: '0.5rem'}}
