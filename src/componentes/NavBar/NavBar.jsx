@@ -11,8 +11,9 @@ import PersonIcon from '@mui/icons-material/Person';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   [theme.breakpoints.down('sm')]: {
-    marginLeft: '1.4rem',
-    marginRight: '1.4rem',
+    marginLeft: '1rem',
+    marginRight: '1rem',
+    width: '35vw',
   },
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.black, 0.15),
@@ -39,26 +40,26 @@ const StyledImgGor = styled('img')(({ theme }) => ({
 
 }));
 const StyledIcon = styled(CardTravelIcon)(({ theme }) => ({
-  paddingBottom: '0.7rem',
-  paddingTop: '0.5rem',
+  marginBottom: '0.7rem',
+  marginTop: '0.5rem',
   color: '#4b7f55',
   [theme.breakpoints.down('sm')]: {
-   
+    fontSize: 25,  
   },
   [theme.breakpoints.up('sm')]: {
-    fontSize: 50,  
+    fontSize: 40,  
   },
 
 }));
 const StyledIcon2 = styled(PersonIcon)(({ theme }) => ({
-  paddingBottom: '0.7rem',
-  paddingTop: '0.5rem',
+  marginBottom: '0.7rem',
+  marginTop: '0.5rem',
   color: '#4b7f55',
   [theme.breakpoints.down('sm')]: {
-   
+    fontSize: 25,  
   },
   [theme.breakpoints.up('sm')]: {
-    fontSize: 50,  
+    fontSize: 40,  
   },
 
 }));
@@ -101,7 +102,7 @@ function NavBar({searcher}) {
           <Toolbar  sx={{ display: 'flex', justifyContent: 
   'space-around' }}>
             <Box  sx={{ display: 'flex', alignContent: 'center', alignItems: 'center'}}>
-            <img style={{height:'4rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' />
+            <img style={{height:'3rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' />
             </Box>
   
             <Search>

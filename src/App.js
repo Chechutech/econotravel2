@@ -9,6 +9,8 @@ import Catalogo from './componentes/Catalogo/Catalogo'
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Filtros/Filtro'
 import catalogo from './componentes/experiencias.json'
+import { Contact } from './componentes/Footer/Contacto';
+import { Login } from './componentes/Login/Login';
 
 function App() {
   const [search, setSearch] = useState('')
@@ -30,6 +32,8 @@ const filterCatalogo = catalogo.filter((card) => {
         {/*<Filtro/>*/}
         {/* <Catalogo catalogo={filterCatalogo}/> */}
          {/* <DetalleExperiencias i='4'/>  */}
+        {/* < Contact/> */}
+        {/* <Login/> */}
         <Home/>
         <Footer/>
       </ThemeProvider>

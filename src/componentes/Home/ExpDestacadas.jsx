@@ -32,14 +32,14 @@ const ExpDestacadas = ({id, id2, id3}) => {
           <Grid  container spacing={10} >
           {array.map((exp, index) => (
               <Grid key={index} item xs={12} sm={6} md={4} style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
-                  <Card   >
+                  <Card   sx={{ maxWidth: 330}} style={{height:"35rem"}}>
                        <CardMedia
                               component="img"
-                              height="270"
+                              height="370"
                               alt="bici montaña"
                               image={exp.img} />
                    <CardContent>
-                   <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>{exp.titulo}</Typography>  
+                   <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55", height:'48px' }}>{exp.titulo}</Typography>  
 
                <Stack direction="row" spacing={1}>
                    <Item2>Chip One1</Item2>

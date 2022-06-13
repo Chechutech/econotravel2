@@ -26,7 +26,7 @@ const StyledTitulo = styled(Typography)(({theme}) => ({
 const DetalleExperiencias = ({i}) => {
     return ( 
         <Box sx={{display:'flex',  flexDirection:'column', alignItems:'center',}}>
-            <Breadcrums/>
+            <Breadcrums i={i}/>
             <StyledTitulo variant="h1">{data[i].titulo}</StyledTitulo>
             <Box sx={{  }}>
                 <ContenidoDetExp i={i}/>
