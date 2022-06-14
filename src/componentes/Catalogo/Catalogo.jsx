@@ -39,7 +39,7 @@ function Catalogo({ data }) {
                                alt="bici montaña"
                               image={exp.img} />
                      <CardContent>
-                     <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}> <Link to={`/cartas/${exp.titulo}`}> {exp.titulo}</Link> </Typography>  
+                     <Link to={`/cartas/${exp.titulo}`}>   <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>  {exp.titulo} </Typography> </Link> 
                <Stack direction="row" spacing={1}>
                    <Item>Chip One</Item>
                     <Item>Chip One</Item>

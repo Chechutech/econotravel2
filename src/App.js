@@ -49,24 +49,11 @@ function App() {
      
       <NavBar searcher={searchers} />
         
-       
-          { /* <Home/>
-        <Filtro/>
-  <Catalogo catalogo={filterCatalogo}/> *
-  <DetalleExperiencias i='3'/>  */}
-        
-       
-     
-     
-       
-        <Routes>
-       
-           
-            <Route path='/cartas/:titulo' element={<DetalleExperiencias/>} /> 
-          <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}>
-              
-            </Route>
-            <Route index element={<Home />} />
+          <Routes>    
+          <Route index element={<Home />} />
+         <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
+          <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>
+               
            </Routes>
            <Footer/>
   
