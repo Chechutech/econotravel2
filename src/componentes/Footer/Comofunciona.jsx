@@ -73,11 +73,7 @@ export default function ComoFunciona() {
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
-                    <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        variant="body2"
-                        color="text.secondary"
-                    >
+                    <TimelineOppositeContent sx={{ m: 'auto 0' }} variant="body2" color="text.secondary">
                         Paso 4
                     </TimelineOppositeContent>
                     <TimelineSeparator>
