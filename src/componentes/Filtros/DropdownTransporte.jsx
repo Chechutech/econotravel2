@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { Button, Box, Menu, MenuItem } from '@mui/material';
 
-function DropdownTransporte() {
+function DropdownTransporte({filterer2}) {
+  
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = (event) => {
     setAnchorEl(null);
+    filterer2(event.target.textContent);
   };
 
   return (

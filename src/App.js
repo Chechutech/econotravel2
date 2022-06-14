@@ -13,26 +13,29 @@ import Filtro from './componentes/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import ComoFunciona from './componentes/Footer/ComoFunciona';
 import PagoSeguro from './componentes/Footer/PagoSeguro';
-import { Contact } from './componentes/Footer/Contacto';
 import { Login } from './componentes/Login/Login';
+import DropdownUbicacion from './componentes/Filtros/DropdownUbicacion';
+import DropdownTransporte from './componentes/Filtros/DropdownTransporte';
+import DropdownDuracion from './componentes/Filtros/DropdownDuracion'
 
 function App() {
   
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false)
+  const [ubicacion, setUbicacion] = useState(null)
+  const [transporte, setTransporte] = useState(null)
+  const [duracion, setDuracion] = useState(null)
  
   useEffect(() => {
-    setLoading(true)
-    axios.get('http://localhost:2500/experiencias')
-      .then(res => {
-        console.log(res.data)
-        setData(res.data);
-        setLoading(false)
-      })
-  }, [])
-
-
+     setLoading(true)
+     axios.get('http://localhost:2500/experiencias')
+       .then(res => {
+         console.log(res.data)
+         setData(res.data);
+         setLoading(false)
+       })
+   }, [])
 
    const searchers = (e) => {
         setSearch(e.target.value)
@@ -44,6 +47,33 @@ function App() {
       });
       if (loading) return <section>Cargando...</section>
 
+    const filterer = (ubicacion) => {
+        setUbicacion(ubicacion)
+        console.log(ubicacion)
+    }
+
+    const filterUbicacion = filterCatalogo.filter((card) => {
+      return card.etiquetas[0].ubicacion === ubicacion
+    });
+
+    const filterer2 = (transporte) => {
+      setTransporte(transporte)
+      console.log(transporte)
+    }
+
+    const filterTransporte = filterUbicacion.filter((card) => {
+      return card.etiquetas[1].transporte === transporte
+    });
+
+    const filterer3 = (duracion) => {
+      setDuracion(duracion)
+      console.log(duracion)
+    }
+
+    const filterDuracion = filterTransporte.filter((card) => {
+      return card.etiquetas[2].duracion === duracion
+    });
+
   return (
     <ThemeProvider theme={theme}>
      
@@ -51,27 +81,27 @@ function App() {
     <div className="App">
         <NavBar searcher={searchers} />
 
+
       <Filtro/>
-      <InfoEmpresa/>
+      {/* <InfoEmpresa/>
       <ComoFunciona/>
-      <PagoSeguro/>
-        {/*<Filtro/>*/}
-        {/* <Catalogo catalogo={filterCatalogo}/> */}
-         {/* <DetalleExperiencias i='4'/>  */}
-        {/* < Contact/> */}
-        {/* <Login/> */}
-        {/* <Home/> */}        
+      <PagoSeguro/> */}
+      <Home/>        
+      <Login/>
+      <DropdownUbicacion filterer={filterer}/>
+      <DropdownTransporte filterer2={filterer2}/>
+      <DropdownDuracion filterer3={filterer3}/>
+      <Catalogo data={filterDuracion}/>
          <Routes>    
-         <Route index element={<Home />} />
-         <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-        <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>
-               
+            <Route index element={<Home />} />
+            <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
+            <Route path='/cartas' element={<Catalogo data={filterDuracion} />}/>               
          </Routes>
-         <Footer/>
-  
-       </div> 
-      </BrowserRouter>
-      </ThemeProvider>
+         <Footer/>  
+      
+         </div>
+    </BrowserRouter>
+    </ThemeProvider>
   );
 }
 export default App;

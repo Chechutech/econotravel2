@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: "#4B7F55",
 }));
 
-export default function InfoEmpresa() {
+function InfoEmpresa() {
     return (
         <Box sx={{ flexGrow: 1, margin: '8rem' }}>
             <Grid container spacing={1}>
@@ -52,3 +52,4 @@ export default function InfoEmpresa() {
         </Box>
     );
 }
+export default InfoEmpresa;
