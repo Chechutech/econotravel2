@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link, Outlet,} from 'react-router-dom'
 import { styled } from '@mui/material/styles';
-import catalogo from '../experiencias.json';
 import { Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -24,8 +23,6 @@ const Item = styled(Paper)(({ theme }) => ({
    
 function Catalogo({ data }) {
   
-  
-
   return (
         <>
           <StyledContainer>
@@ -39,7 +36,7 @@ function Catalogo({ data }) {
                                alt="bici montaña"
                               image={exp.img} />
                      <CardContent>
-                     <Link to={`/cartas/${exp.titulo}`}>   <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>  {exp.titulo} </Typography> </Link> 
+                     <Link to={`/cartas/${exp.titulo}`} style={{textDecoration: "none"}}>   <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55" }}>  {exp.titulo} </Typography> </Link> 
                <Stack direction="row" spacing={1}>
                    <Item>Chip One</Item>
                     <Item>Chip One</Item>

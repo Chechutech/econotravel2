@@ -46,18 +46,17 @@ function App() {
      
     <BrowserRouter>
     <div className="App">
-     
-      <NavBar searcher={searchers} />
+     <NavBar searcher={searchers} />
         
-          <Routes>    
-          <Route index element={<Home />} />
+         <Routes>    
+         <Route index element={<Home />} />
          <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-          <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>
+        <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>
                
-           </Routes>
-           <Footer/>
+         </Routes>
+         <Footer/>
   
-      </div> 
+       </div> 
       </BrowserRouter>
       </ThemeProvider>
   );
