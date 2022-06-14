@@ -7,7 +7,7 @@ const Home = () => {
     return ( 
         <>
             <Hero/>
-            <ExpDestacadas/>
+            <ExpDestacadas id='2'   id2='4'  id3='6'/>
             <Contactanos/>
             <RegistrateHoy/>
         </>

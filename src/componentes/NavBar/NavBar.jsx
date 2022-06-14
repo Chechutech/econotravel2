@@ -1,16 +1,20 @@
 import * as React from 'react';
-import { Box, AppBar,Toolbar, InputBase, Stack, styled, alpha, } from '@mui/material';
+import { Box, AppBar, Toolbar, InputBase, Stack, styled, alpha, } from '@mui/material';
+import { Link, Outlet } from 'react-router-dom'
 import logo4 from '../imagenes/logo4.png';
 import SearchIcon from '@mui/icons-material/Search';
 import gorila4 from '../imagenes/gorila4a.png';
 import cesta from '../imagenes/cesta.png';
+import CardTravelIcon from '@mui/icons-material/CardTravel';
+import PersonIcon from '@mui/icons-material/Person';
 
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   [theme.breakpoints.down('sm')]: {
-    marginLeft: '1.4rem',
-    marginRight: '1.4rem',
+    marginLeft: '1rem',
+    marginRight: '1rem',
+    width: '35vw',
   },
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.black, 0.15),
@@ -36,14 +40,27 @@ const StyledImgGor = styled('img')(({ theme }) => ({
   },
 
 }));
-const StyledImgCesta = styled('img')(({ theme }) => ({
-  paddingBottom: '0.7rem',
-  paddingTop: '0.5rem',
+const StyledIcon = styled(CardTravelIcon)(({ theme }) => ({
+  marginBottom: '0.7rem',
+  marginTop: '0.5rem',
+  color: '#4b7f55',
   [theme.breakpoints.down('sm')]: {
-    height:'1.8rem',  
+    fontSize: 25,  
   },
   [theme.breakpoints.up('sm')]: {
-    height:'3rem',  
+    fontSize: 40,  
+  },
+
+}));
+const StyledIcon2 = styled(PersonIcon)(({ theme }) => ({
+  marginBottom: '0.7rem',
+  marginTop: '0.5rem',
+  color: '#4b7f55',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: 25,  
+  },
+  [theme.breakpoints.up('sm')]: {
+    fontSize: 40,  
   },
 
 }));
@@ -85,27 +102,31 @@ function NavBar({searcher}) {
         <StyledAppBar position="fixed" elevation={0} >
           <Toolbar  sx={{ display: 'flex', justifyContent: 
   'space-around' }}>
-            <Box  sx={{ display: 'flex', alignContent: 'center', alignItems: 'center'}}>
-            <img style={{height:'4rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' />
+            <Box  sx={{ display: 'flex', alignContent: 'center', alignItems: 'center'}}><Link to='/'> 
+            <img style={{height:'4rem', paddingBottom: '0.7rem', paddingTop: '0.5rem' }} src={logo4} alt='logo' /> </Link>
             </Box>
   
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase  onChange={searcher}
+              <Link to='/cartas'> 
+              <StyledInputBase onChange={searcher}
                 placeholder="Buscar..."
                 inputProps={{ 'aria-label': 'search' }}
-              />
+                /></Link>
+               
             </Search>
             <Stack direction="row" spacing={2} sx={{ display: 'flex', alignItems:'center' }}>
-                <StyledImgGor alt="gorila" src={gorila4} />
-                <StyledImgCesta alt="cesta" src={cesta}  />
+                <StyledIcon2 />
+                <StyledIcon sx={{ }}/>
               </Stack>
             
          </Toolbar>
         </StyledAppBar>
+        <Outlet/>
       </Box>
+     
     );
   }
   export default NavBar

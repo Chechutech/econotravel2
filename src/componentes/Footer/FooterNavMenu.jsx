@@ -9,8 +9,8 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   justifyContent: 'center',
 
   [theme.breakpoints.down('sm')]: {
-    backgroundColor: '#FFFAFA',
-    width:'6rem',
+    color: '#FFFAFA',
+    width:'5rem',
     },
 
 [theme.breakpoints.up('sm')]: {
@@ -26,8 +26,17 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
     },
     textDecoration: 'none',
     fontWeight: 'bold',
-    color:"black",
+    
     fontSize: '0.9rem',
+    [theme.breakpoints.down('sm')]: {
+      color: '#FFFAFA',
+      
+      },
+  
+  [theme.breakpoints.up('sm')]: {
+    color:"black",
+  }, 
+    
   }));
   
   
@@ -43,8 +52,12 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
               <StyledLink  variant="body1" >¿Quienes somos?</StyledLink>
           </StyledListItem>
   
+          <StyledListItem sx={{  marginRight:'1rem'}}>
+              <StyledLink  variant="body1" >Contacto</StyledLink>
+          </StyledListItem>
+
           <StyledListItem >
-              <StyledLink  variant="body1" >Medios de pago</StyledLink>
+              <StyledLink  variant="body1" >Pago Seguro</StyledLink>
           </StyledListItem>
           
         </List>

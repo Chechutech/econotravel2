@@ -2,6 +2,7 @@ import * as React from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import data from '../experiencias.json'
 import Stack from '@mui/material/Stack';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
@@ -10,7 +11,7 @@ function handleClick(event) {
   console.info('You clicked a breadcrumb.');
 }
 
-export default function Breadcrums() {
+export default function Breadcrums({i}) {
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/" onClick={handleClick}>
       Inicio
@@ -22,11 +23,26 @@ export default function Breadcrums() {
       href="/material-ui/getting-started/installation/"
       onClick={handleClick}
     >
-      Montaña
+      patata
     </Link>,
-    <Typography key="3" color="text.primary">
-      Bicicleta
-    </Typography>,
+   <Link
+   underline="hover"
+   key="2"
+   color="inherit"
+   href="/material-ui/getting-started/installation/"
+   onClick={handleClick}
+ >
+  patata
+ </Link>,
+ <Link
+ underline="hover"
+ key="2"
+ color="inherit"
+ href="/material-ui/getting-started/installation/"
+ onClick={handleClick}
+>
+  patata
+</Link>,
   ];
 
   return (
