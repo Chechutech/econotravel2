@@ -152,7 +152,7 @@
           "ubicacion": "Montaña"
         },
         {
-          "transporte": ["Bus","Globo"]
+          "transporte": "Globo"
         },
         {
           "duracion": "Excursión larga"

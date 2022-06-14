@@ -43,23 +43,23 @@ function Filtro() {
       return card.etiquetas[0].ubicacion === ubicacion
     });
 
-    const filterer2 = (transporte) => {
-      setTransporte(transporte)
-      console.log(transporte)
-    }
+    // const filterer2 = (transporte) => {
+    //   setTransporte(transporte)
+    //   console.log(transporte)
+    // }
 
-    const filterTransporte = filterUbicacion.filter((card) => {
-      return card.etiquetas[1].transporte === transporte
-    });
+    // const filterTransporte = filterUbicacion.filter((card) => {
+    //   return card.etiquetas[1].transporte === transporte
+    // });
 
-    const filterer3 = (duracion) => {
-      setDuracion(duracion)
-      console.log(duracion)
-    }
+    // const filterer3 = (duracion) => {
+    //   setDuracion(duracion)
+    //   console.log(duracion)
+    // }
 
-    const filterDuracion = filterTransporte.filter((card) => {
-      return card.etiquetas[2].duracion === duracion
-    });
+    // const filterDuracion = filterTransporte.filter((card) => {
+    //   return card.etiquetas[2].duracion === duracion
+    // });
 
   return (
     <>
@@ -69,9 +69,9 @@ function Filtro() {
         </Typography>
         <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0.5rem' }}>
         <DropdownUbicacion filterer={filterer}/>
-        <DropdownTransporte filterer2={filterer2}/>
-        <DropdownDuracion filterer3={filterer3}/>
-        <Catalogo data={filterDuracion}/>
+        <DropdownTransporte />
+        <DropdownDuracion />
+        <Catalogo data={filterUbicacion}/>
         </Box>
       </Box>
     </>

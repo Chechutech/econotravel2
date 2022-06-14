@@ -62,17 +62,17 @@ function App() {
     }
 
     const filterTransporte = filterUbicacion.filter((card) => {
-      return card.etiquetas[1].transporte === transporte
+      return card.etiquetas[1].transporte == transporte
     });
 
-    const filterer3 = (duracion) => {
-      setDuracion(duracion)
-      console.log(duracion)
-    }
+    // const filterer3 = (duracion) => {
+    //   setDuracion(duracion)
+    //   console.log(duracion)
+    // }
 
-    const filterDuracion = filterTransporte.filter((card) => {
-      return card.etiquetas[2].duracion === duracion
-    });
+    // const filterDuracion = filterTransporte.filter((card) => {
+    //   return card.etiquetas[2].duracion === duracion
+    // });
 
   return (
     <ThemeProvider theme={theme}>
@@ -82,21 +82,21 @@ function App() {
         <NavBar searcher={searchers} />
 
 
-      <Filtro/>
+      {/* <Filtro/> */}
       {/* <InfoEmpresa/>
       <ComoFunciona/>
       <PagoSeguro/> */}
-      <Home/>        
-      <Login/>
-      <DropdownUbicacion filterer={filterer}/>
-      <DropdownTransporte filterer2={filterer2}/>
-      <DropdownDuracion filterer3={filterer3}/>
-      <Catalogo data={filterDuracion}/>
+      {/* <Home/>        
+      <Login/> */}
          <Routes>    
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-            <Route path='/cartas' element={<Catalogo data={filterDuracion} />}/>               
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>               
          </Routes>
+      <DropdownUbicacion filterer={filterer}/>
+      <DropdownTransporte filterer2={filterer2}/>
+      <DropdownDuracion/>
+      <Catalogo data={filterTransporte}/>
          <Footer/>  
       
          </div>
