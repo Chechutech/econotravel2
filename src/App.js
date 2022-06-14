@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import {BrowserRouter,  Routes, Route, useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import axios from "axios";
 import Footer from './componentes/Footer/Footer';
 import NavBar from './componentes/NavBar/NavBar';
 import theme from './componentes/Styles/Theme';
@@ -9,24 +10,37 @@ import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo'
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Filtros/Filtro'
-import catalogo from './componentes/experiencias.json'
+
 
 
 function App() {
+  
+  const [data, setData] = useState([])
   const [search, setSearch] = useState('')
-  
+  const [loading, setLoading] = useState(false)
+ 
+  useEffect(() => {
+    setLoading(true)
+    axios.get('http://localhost:2500/experiencias')
+      .then(res => {
+        console.log(res.data)
+        setData(res.data);
+        setLoading(false)
+      })
+  }, [])
+
+
+
    const searchers = (e) => {
-    setSearch(e.target.value)
-   console.log(e.target.value)
-  
+        setSearch(e.target.value)
+        console.log(e.target.value)
     }
-   const filterCatalogo = catalogo.filter((card) => {
-  return card.titulo.toLowerCase().includes(search.toLowerCase())
-   });
-  
-   const {titulo} = useParams()
- 
- 
+   
+    const filterCatalogo = data.filter((card) => {
+        return card.titulo.toLowerCase().includes(search.toLowerCase())
+      });
+      if (loading) return <section>Cargando...</section>
+
   return (
     <ThemeProvider theme={theme}>
      
@@ -48,8 +62,8 @@ function App() {
         <Routes>
        
            
-            <Route path='/cartas/:titulo' element={<DetalleExperiencias i={ titulo} />} /> 
-          <Route path='/cartas' element={<Catalogo catalogo={filterCatalogo} />}>
+            <Route path='/cartas/:titulo' element={<DetalleExperiencias/>} /> 
+          <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}>
               
             </Route>
             <Route index element={<Home />} />

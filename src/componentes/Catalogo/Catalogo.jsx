@@ -22,7 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
    }));
   
    
-function Catalogo({ catalogo }) {
+function Catalogo({ data }) {
   
   
 
@@ -30,7 +30,7 @@ function Catalogo({ catalogo }) {
         <>
           <StyledContainer>
             <Grid container spacing={10}>
-               {catalogo.map((exp, index) => (
+               {data.map((exp, index) => (
                  <Grid key={index} item xs={12} sm={6} md={4}>
                   <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
                     <CardMedia
