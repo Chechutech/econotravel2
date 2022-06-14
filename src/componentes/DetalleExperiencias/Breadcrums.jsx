@@ -23,7 +23,7 @@ export default function Breadcrums({i}) {
       href="/material-ui/getting-started/installation/"
       onClick={handleClick}
     >
-      {data[i].etiquetas[0].ubicacion}
+      patata
     </Link>,
    <Link
    underline="hover"
@@ -32,7 +32,7 @@ export default function Breadcrums({i}) {
    href="/material-ui/getting-started/installation/"
    onClick={handleClick}
  >
-   {data[i].etiquetas[1].transporte}
+  patata
  </Link>,
  <Link
  underline="hover"
@@ -41,7 +41,7 @@ export default function Breadcrums({i}) {
  href="/material-ui/getting-started/installation/"
  onClick={handleClick}
 >
- {data[i].etiquetas[2].duracion}
+  patata
 </Link>,
   ];
 

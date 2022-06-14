@@ -118,13 +118,8 @@ function NavBar({searcher}) {
                
             </Search>
             <Stack direction="row" spacing={2} sx={{ display: 'flex', alignItems:'center' }}>
-<<<<<<< HEAD
                 <StyledIcon2 />
                 <StyledIcon sx={{ }}/>
-=======
-            <StyledImgGor alt="gorila" src={gorila4} />
-               <StyledImgCesta alt="cesta" src={cesta}  />
->>>>>>> fb0be337e07be51f622c3fe7d7e4ae201d7b672b
               </Stack>
             
          </Toolbar>

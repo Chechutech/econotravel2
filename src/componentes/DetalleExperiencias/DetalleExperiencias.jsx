@@ -6,7 +6,6 @@ import Breadcrums from "./Breadcrums";
 import ReadMore from "./ReadMore";
 import { useParams } from "react-router-dom";
 import DesplegableCantidad from './DesplegableCantidad';
-import ContenidoDetExp from './ContenidoDetExp';
 
 
 

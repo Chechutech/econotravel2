@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import data from '../experiencias.json';
 import test from '../imagenes/logo4.png'
 import ImageHero from "../imagenes/HeroImage2.png";
-import { Link } from 'react-router-dom';
 
 
 const HeroBox = styled(Box)(({theme}) => ({
