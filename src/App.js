@@ -10,6 +10,7 @@ import Home from './componentes/Home/Home';
 import Filtro from './componentes/Filtros/Filtro';
 import catalogo from './componentes/experiencias.json';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
+import ComoFunciona from './componentes/Footer/ComoFunciona';
 
 function App() {
   const [search, setSearch] = useState('')
@@ -31,6 +32,7 @@ const filterCatalogo = catalogo.filter((card) => {
 
       <Filtro/>
       <InfoEmpresa/>
+      <ComoFunciona/>
       </ThemeProvider>
     </div>
   );

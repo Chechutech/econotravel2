@@ -22,7 +22,7 @@ export default function InfoEmpresa() {
                     <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center">Misión</Typography>
                     <Typography variant="body2" color="text.secondary" align="justify" padding="3vh"> Nuestra empresa se fundó a raíz de un viaje que nuestra fundadora, Marina Herrán, realizó en bicicleta por Cataluña en el verano de 2001. </Typography>
                     <Typography variant="body2" color="text.secondary" align="justify" padding="3vh"> Durante ese periodo, descubrió que las opciones turísticas que ofrecían ciudades como Barcelona, Girona y Reus dependían de transportes contaminantes y actividades poco respetuosas con la naturaleza y el entorno, algo que causaba un progresivo deterioro de los increíbles parajes naturales de Cataluña. </Typography>
-                    <Typography variant="body2" color="text.secondary" align="justify" padding="3vh"> Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar una agencia de experiencias turísticas donde el respeto por la naturaleza fuera la principal prioridad. Así nació Econotravel Barcelona.</Typography>
+                    <Typography > Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar una agencia de experiencias turísticas donde el respeto por la naturaleza fuera la principal prioridad. Así nació Econotravel Barcelona.</Typography>
                     <CardActions>
                         <Button size="large" color="primary">Contáctanos
                         </Button>
