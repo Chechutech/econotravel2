@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Button, Box, Menu, MenuItem} from '@mui/material';
     
-function Transporte() {
+function DropdownTransporte() {
       const [anchorEl, setAnchorEl] = React.useState(null);
       const open = Boolean(anchorEl);
       const handleClick = (event) => {
@@ -23,4 +23,4 @@ function Transporte() {
         </Box>
       );
     }
-export default Transporte;
+export default DropdownTransporte;
