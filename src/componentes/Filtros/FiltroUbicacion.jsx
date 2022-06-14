@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {useState, useEffect} from 'react';
-import Catalogo from '../Catalogo/Catalogo';
 import Experiencias from '../experiencias.json';
 import { styled } from '@mui/material/styles';
 import { Box, Card, CardActions, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
@@ -24,7 +23,7 @@ const Item = styled(Paper)(({ theme }) => ({
  }));
 
     
-function FiltroUbicacion (Catalogo) {
+function FiltroUbicacion ( ) {
 
     const [filteredList, setFilteredList] = useState(Experiencias);
 
