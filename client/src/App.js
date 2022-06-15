@@ -7,18 +7,25 @@ import theme from './componentes/Styles/Theme';
 import DetalleExperiencias from './componentes/DetalleExperiencias/DetalleExperiencias';
 import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
-import Catalogo from './componentes/Catalogo/Catalogo'
+import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
-import Filtro from './componentes/Filtros/Filtro'
-import catalogo from './componentes/experiencias.json'
-import { Contact } from './componentes/Footer/Contacto';
+import Filtro from './componentes/Catalogo/Filtros/Filtro';
+import InfoEmpresa from './componentes/Footer/InfoEmpresa';
+import ComoFunciona from './componentes/Footer/ComoFunciona';
+import PagoSeguro from './componentes/Footer/PagoSeguro';
 import { Login } from './componentes/Login/Login';
+import DropdownUbicacion from './componentes/Catalogo/Filtros/DropdownUbicacion';
+import DropdownTransporte from './componentes/Catalogo/Filtros/DropdownTransporte';
+import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion'
 
 function App() {
   
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false)
+  const [ubicacion, setUbicacion] = useState(null)
+  const [transporte, setTransporte] = useState(null)
+  const [duracion, setDuracion] = useState(null)
  
   useEffect(() => {
     setLoading(true)
@@ -40,29 +47,66 @@ function App() {
       });
       if (loading) return <section>Cargando...</section>
 
+    const filterer = (ubicacion) => {
+        setUbicacion(ubicacion)
+        console.log(ubicacion)
+    }
+
+    const filterUbicacion = filterCatalogo.filter((card) => {
+      return card.etiquetas[0].ubicacion === ubicacion
+    });
+
+    // const filterer2 = (transporte) => {
+    //   setTransporte(transporte)
+    //   console.log(transporte)
+    // }
+
+    // const filterTransporte = filterUbicacion.filter((card) => {
+    //   return card.etiquetas[1].transporte == transporte
+    // });
+
+    // const filterer3 = (duracion) => {
+    //   setDuracion(duracion)
+    //   console.log(duracion)
+    // }
+
+    // const filterDuracion = filterTransporte.filter((card) => {
+    //   return card.etiquetas[2].duracion === duracion
+    // });
+
   return (
     <ThemeProvider theme={theme}>
      
     <BrowserRouter>
     <div className="App">
         <NavBar searcher={searchers} />
-        {/*<Filtro/>*/}
-        {/* <Catalogo catalogo={filterCatalogo}/> */}
-         {/* <DetalleExperiencias i='4'/>  */}
-        {/* < Contact/> */}
-        {/* <Login/> */}
-        {/* <Home/> */}        
+
+
+      <Filtro/>
+      {/* <InfoEmpresa/>
+      <ComoFunciona/>
+      <PagoSeguro/> */}
+      {/* <Home/>        
+      <Login/> */}
          <Routes>    
-         <Route index element={<Home />} />
-         <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-        <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>
-               
+            <Route index element={<Home />} />
+            <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>               
          </Routes>
-         <Footer/>
-  
-       </div> 
-      </BrowserRouter>
-      </ThemeProvider>
+      <DropdownUbicacion filterer={filterer}/>
+      <DropdownTransporte />
+      <DropdownDuracion/>
+      <Catalogo data={filterUbicacion}/>
+         <Footer/>  
+      
+         </div>
+    </BrowserRouter>
+    </ThemeProvider>
   );
 }
 export default App;
+
+{/*<Catalogo catalogo={filterCatalogo}></Catalogo>
+<DetalleExperiencias i='4'/>
+<Home/>
+<Footer/>*/}

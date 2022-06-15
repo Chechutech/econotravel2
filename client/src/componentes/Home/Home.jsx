@@ -1,14 +1,12 @@
-import Hero from "./Hero";
-import ExpDestacadas from "./ExpDestacadas";
-import Contactanos from "./Contactanos";
+import Hero from "./Hero.jsx";
+// import ExpDestacadas from "./ExpDestacadas";
 import RegistrateHoy from "./RegistrateHoy";
 
-const Home = () => {
+function Home (){
     return ( 
         <>
             <Hero/>
-            <ExpDestacadas id='2'   id2='4'  id3='6'/>
-            <Contactanos/>
+            {/* <ExpDestacadas id='2'   id2='4'  id3='6'/> */}
             <RegistrateHoy/>
         </>
 
