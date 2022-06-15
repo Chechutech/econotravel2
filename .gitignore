@@ -10,8 +10,8 @@
 # testing
 /coverage
 
-# testing
-/server
+# # testing
+# /server
 
 # production
 /build
