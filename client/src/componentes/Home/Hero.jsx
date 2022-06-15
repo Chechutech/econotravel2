@@ -1,5 +1,6 @@
 import { styled, Box, Typography, Button} from "@mui/material";
-import data from '../experiencias.json';
+import { Link } from 'react-router-dom'
+
 import test from '../imagenes/logo4.png'
 import ImageHero from "../imagenes/HeroImage2.png";
 
