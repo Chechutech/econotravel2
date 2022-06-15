@@ -1,10 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios";
 import { Box, Typography } from '@mui/material';
-import DropdownUbicacion from '../Filtros/DropdownUbicacion';
-import DropdownTransporte from '../Filtros/DropdownTransporte';
-import DropdownDuracion from '../Filtros/DropdownDuracion';
-import Catalogo from '../Catalogo/Catalogo'
+import DropdownUbicacion from './DropdownUbicacion';
+import DropdownTransporte from './DropdownTransporte';
+import DropdownDuracion from './DropdownDuracion';
+import Catalogo from '../Catalogo'
 
 function Filtro() {
   const [data, setData] = useState([])
@@ -16,7 +16,7 @@ function Filtro() {
  
   useEffect(() => {
      setLoading(true)
-     axios.get('http://localhost:2500/experiencias')
+     axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
        .then(res => {
          console.log(res.data)
          setData(res.data);

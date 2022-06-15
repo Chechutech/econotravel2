@@ -9,14 +9,14 @@ import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
-import Filtro from './componentes/Filtros/Filtro';
+import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import ComoFunciona from './componentes/Footer/ComoFunciona';
 import PagoSeguro from './componentes/Footer/PagoSeguro';
 import { Login } from './componentes/Login/Login';
-import DropdownUbicacion from './componentes/Filtros/DropdownUbicacion';
-import DropdownTransporte from './componentes/Filtros/DropdownTransporte';
-import DropdownDuracion from './componentes/Filtros/DropdownDuracion'
+import DropdownUbicacion from './componentes/Catalogo/Filtros/DropdownUbicacion';
+import DropdownTransporte from './componentes/Catalogo/Filtros/DropdownTransporte';
+import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion'
 
 function App() {
   
