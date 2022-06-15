@@ -11,12 +11,13 @@ import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
-import ComoFunciona from './componentes/Footer/ComoFunciona';
-import PagoSeguro from './componentes/Footer/PagoSeguro';
 import { Login } from './componentes/Login/Login';
-import DropdownUbicacion from './componentes/Catalogo/Filtros/DropdownUbicacion';
-import DropdownTransporte from './componentes/Catalogo/Filtros/DropdownTransporte';
-import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion'
+import DropdownUbicacion from './componentes/Catalogo/Filtros/Ubicacion/DropdownUbicacion';
+import DropdownTransporte from './componentes/Catalogo/Filtros/Transporte/DropdownTransporte';
+import DropdownDuracion from './componentes/Catalogo/Filtros/Duracion/DropdownDuracion';
+import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
+import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
+import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
 
 function App() {
   
@@ -80,24 +81,25 @@ function App() {
     <BrowserRouter>
     <div className="App">
         <NavBar searcher={searchers} />
+        {/* <CatalogoS/> */}
 
-
-      <Filtro/>
-      {/* <InfoEmpresa/>
-      <ComoFunciona/>
-      <PagoSeguro/> */}
       {/* <Home/>        
       <Login/> */}
          <Routes>    
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>               
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/> 
+            <Route path='/:ubi' element={<CatalogoUbicacion/>}/>               
+            <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>               
+            <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>               
          </Routes>
-      <DropdownUbicacion filterer={filterer}/>
+      {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
-      <DropdownDuracion/>
-      <Catalogo data={filterUbicacion}/>
+      <DropdownDuracion/>  */}
+      {/* <Filtro/> */}
          <Footer/>  
+
+         
       
          </div>
     </BrowserRouter>
@@ -106,7 +108,7 @@ function App() {
 }
 export default App;
 
-{/*<Catalogo catalogo={filterCatalogo}></Catalogo>
+{/* <Catalogo catalogo={filterCatalogo}></Catalogo>
 <DetalleExperiencias i='4'/>
 <Home/>
-<Footer/>*/}
+<Footer/> */}
