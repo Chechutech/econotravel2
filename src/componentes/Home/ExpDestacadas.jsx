@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import data from '../experiencias.json'
 import {Grid,Container, Box, Paper, styled,Card, CardMedia,CardContent, Stack, Item,Button, Typography, CardActions} from '@mui/material'
 
@@ -18,14 +20,34 @@ const Item2 = styled(Paper)(({ theme }) => ({
     justifyContent:"space-around",
   }));
 
-const ExpDestacadas = ({id, id2, id3}) => {
+const ExpDestacadas = ({ id, id2, id3 }) => {
+  
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    setLoading(true)
+    axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
+      .then(res => {
+        console.log(res.data)
+        setData(res.data);
+        setLoading(false)
+      })
+  }, [])
+
+
+
+
     const exp1= data.filter(exp=> exp.id == id)
     const exp2= data.filter(exp=> exp.id==id2)
     const exp3= data.filter(exp=> exp.id==id3)
-    const array=[...exp1,...exp2,...exp3]
-    console.log(array)
+  const array = [...exp1, ...exp2, ...exp3]
+  
+console.log(array)
+  
+
     return (  
-    <>
+      <>
+        
     <Typography variant="h1" style={{fontSize:'2rem', textAlign:'center', fontWeight:'bold', color:'#DE541E'}} >EXPERIENCIAS DESTACADAS</Typography>
     <StyledContainer > 
     

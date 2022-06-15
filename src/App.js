@@ -22,15 +22,13 @@ function App() {
  
   useEffect(() => {
     setLoading(true)
-    axios.get('http://localhost:2500/experiencias')
+    axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
       .then(res => {
         console.log(res.data)
         setData(res.data);
         setLoading(false)
       })
   }, [])
-
-
 
    const searchers = (e) => {
         setSearch(e.target.value)
