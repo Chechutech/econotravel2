@@ -56,14 +56,14 @@ function App() {
       return card.etiquetas[0].ubicacion === ubicacion
     });
 
-    const filterer2 = (transporte) => {
-      setTransporte(transporte)
-      console.log(transporte)
-    }
+    // const filterer2 = (transporte) => {
+    //   setTransporte(transporte)
+    //   console.log(transporte)
+    // }
 
-    const filterTransporte = filterUbicacion.filter((card) => {
-      return card.etiquetas[1].transporte == transporte
-    });
+    // const filterTransporte = filterUbicacion.filter((card) => {
+    //   return card.etiquetas[1].transporte == transporte
+    // });
 
     // const filterer3 = (duracion) => {
     //   setDuracion(duracion)
@@ -82,7 +82,7 @@ function App() {
         <NavBar searcher={searchers} />
 
 
-      {/* <Filtro/> */}
+      <Filtro/>
       {/* <InfoEmpresa/>
       <ComoFunciona/>
       <PagoSeguro/> */}
@@ -94,9 +94,9 @@ function App() {
             <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>               
          </Routes>
       <DropdownUbicacion filterer={filterer}/>
-      <DropdownTransporte filterer2={filterer2}/>
+      <DropdownTransporte />
       <DropdownDuracion/>
-      <Catalogo data={filterTransporte}/>
+      <Catalogo data={filterUbicacion}/>
          <Footer/>  
       
          </div>

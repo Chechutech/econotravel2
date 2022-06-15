@@ -67,7 +67,7 @@ function Filtro() {
         <Typography variant="h4" fontSize="1.8rem" textAlign="center" color="#4B7F55">
           Experiencias en el área de Barcelona
         </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', margin: '0.5rem' }}>
+        <Box sx={{ height: '400vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', margin: '0.5rem' }}>
         <DropdownUbicacion filterer={filterer}/>
         <DropdownTransporte />
         <DropdownDuracion />
