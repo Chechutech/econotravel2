@@ -3,9 +3,6 @@ import {Link, Outlet,} from 'react-router-dom'
 import { styled } from '@mui/material/styles';
 import { Card, CardActions,Box, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
 import Filtro from './Filtros/Filtro';
-import DropdownUbicacion from './Filtros/Ubicacion/DropdownUbicacion';
-import DropdownTransporte from './Filtros/Transporte/DropdownTransporte';
-import DropdownDuracion from './Filtros/Duracion/DropdownDuracion';
 
 
 

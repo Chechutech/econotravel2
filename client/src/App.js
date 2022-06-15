@@ -89,7 +89,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
             <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/> 
-            <Route path='/:ubi' element={<CatalogoUbicacion/>}/>               
+            <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>               
             <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>               
             <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>               
          </Routes>

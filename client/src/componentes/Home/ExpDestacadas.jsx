@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import data from '../experiencias.json'
 import {Grid,Container, Box, Paper, styled,Card, CardMedia,CardContent, Stack, Item,Button, Typography, CardActions} from '@mui/material'
+import Filtro from "../Catalogo/Filtros/Filtro.jsx";
+
 
 const Item2 = styled(Paper)(({ theme }) => ({
     backgroundColor: "#FFFAFA",
@@ -49,6 +51,7 @@ console.log(array)
       <>
         
     <Typography variant="h1" style={{fontSize:'2rem', textAlign:'center', fontWeight:'bold', color:'#DE541E'}} >EXPERIENCIAS DESTACADAS</Typography>
+    <Filtro/>
     <StyledContainer > 
     
           <Grid  container spacing={10} >

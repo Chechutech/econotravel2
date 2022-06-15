@@ -28,7 +28,7 @@ const Item = styled(Paper)(({ theme }) => ({
   
    
 function CatalogoDuracion() {
-  const {ubi} = useParams()
+  const {dur} = useParams()
 
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false);
@@ -44,8 +44,8 @@ function CatalogoDuracion() {
   }, [])
     console.log(data)
 
-  const findUbicaciones = data.filter(experiencias => experiencias.etiquetas[0].ubicacion == ubi);
-  console.log(findUbicaciones)
+  const findDuracion = data.filter(experiencias => experiencias.etiquetas[2].duracion == dur);
+  console.log(findDuracion)
   if (loading) return <section>Cargando...</section>;
 
   return (
@@ -55,7 +55,7 @@ function CatalogoDuracion() {
      
                    
             <Grid container spacing={10}>
-               {findUbicaciones.map((exp, index) => (
+               {findDuracion.map((exp, index) => (
                  <Grid key={index} item xs={12} sm={6} md={4}>
                   <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
                     <CardMedia

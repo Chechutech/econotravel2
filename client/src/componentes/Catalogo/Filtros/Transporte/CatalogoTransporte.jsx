@@ -28,7 +28,7 @@ const Item = styled(Paper)(({ theme }) => ({
   
    
 function CatalogoTransporte() {
-  const {ubi} = useParams()
+  const {trans} = useParams()
 
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false);
@@ -44,8 +44,8 @@ function CatalogoTransporte() {
   }, [])
     console.log(data)
 
-  const findUbicaciones = data.filter(experiencias => experiencias.etiquetas[0].ubicacion == ubi);
-  console.log(findUbicaciones)
+  const findTransporte = data.filter(experiencias => experiencias.etiquetas[1].transporte.includes(trans));
+  console.log(findTransporte)
   if (loading) return <section>Cargando...</section>;
 
   return (
@@ -55,7 +55,7 @@ function CatalogoTransporte() {
      
                    
             <Grid container spacing={10}>
-               {findUbicaciones.map((exp, index) => (
+               {findTransporte.map((exp, index) => (
                  <Grid key={index} item xs={12} sm={6} md={4}>
                   <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
                     <CardMedia
