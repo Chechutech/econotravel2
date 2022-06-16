@@ -22,7 +22,7 @@ const styledDot = styled(TimelineDot)(({ theme }) => ({
 
 export default function ComoFunciona() {
     return (
-        <Card sx={{ height: 600, maxWidth: 1200 }}>
+        <Card sx={{ height: 500, maxWidth: 1200, boxShadow: 1 }}>
             <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center" color="#4B7F55">¿Cómo reservar?</Typography>
             <Timeline position="alternate" >
                 <TimelineItem>

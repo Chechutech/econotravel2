@@ -10,13 +10,13 @@ import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Catalogo/Filtros/Filtro';
-import InfoEmpresa from './componentes/Footer/InfoEmpresa';
-import ComoFunciona from './componentes/Footer/ComoFunciona';
-import PagoSeguro from './componentes/Footer/PagoSeguro';
 import { Login } from './componentes/Login/Login';
 import DropdownUbicacion from './componentes/Catalogo/Filtros/DropdownUbicacion';
 import DropdownTransporte from './componentes/Catalogo/Filtros/DropdownTransporte';
-import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion'
+import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion';
+import InfoEmpresa from './componentes/Footer/InfoEmpresa';
+import PagoSeguro from './componentes/Footer/PagoSeguro';
+import ComoFunciona from './componentes/Footer/ComoFunciona'
 
 function App() {
   
@@ -81,11 +81,6 @@ function App() {
     <div className="App">
         <NavBar searcher={searchers} />
 
-
-      <Filtro/>
-      {/* <InfoEmpresa/>
-      <ComoFunciona/>
-      <PagoSeguro/> */}
       {/* <Home/>        
       <Login/> */}
          <Routes>    
@@ -93,10 +88,13 @@ function App() {
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
             <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>               
          </Routes>
-      <DropdownUbicacion filterer={filterer}/>
+      {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
       <DropdownDuracion/>
-      <Catalogo data={filterUbicacion}/>
+      <Catalogo data={filterCatalogo}/> */}
+      <InfoEmpresa/>
+      <ComoFunciona/>
+      <PagoSeguro/>
          <Footer/>  
       
          </div>
