@@ -11,12 +11,12 @@ import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
-import ComoFunciona from './componentes/Footer/ComoFunciona';
-import PagoSeguro from './componentes/Footer/PagoSeguro';
+import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import { Login } from './componentes/Login/Login';
 import DropdownUbicacion from './componentes/Catalogo/Filtros/DropdownUbicacion';
 import DropdownTransporte from './componentes/Catalogo/Filtros/DropdownTransporte';
 import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion'
+
 
 function App() {
   
@@ -82,7 +82,7 @@ function App() {
         <NavBar searcher={searchers} />
 
 
-      <Filtro/>
+     
       {/* <InfoEmpresa/>
       <ComoFunciona/>
       <PagoSeguro/> */}
@@ -90,8 +90,11 @@ function App() {
       <Login/> */}
          <Routes>    
             <Route index element={<Home />} />
+
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/>               
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />} />  
+            <Route path='/destacadas' element={<ExpDestacadas/>}/>
+            <Route path='/destacadas/:id' element={<DetalleExperiencias />} />
          </Routes>
       <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />

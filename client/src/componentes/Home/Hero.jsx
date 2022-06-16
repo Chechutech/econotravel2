@@ -101,9 +101,9 @@ const Hero = () => {
           <Typ3  style={{color:'#4b7f55'}}>disfruta de un sin fin de experiencias que te esperan.</Typ3>
           <Typ3  style={{color:'#4b7f55', marginBottom:'1.4rem'}}>¡Sonríe, están empezando tus vacaciones!</Typ3>
           <Box style={{display:'flex',justifyContent:'center',}}>
-            <StyledButton>
+           <Link to='/cartas'  style={{textDecoration: "none"}}> <StyledButton>
                   ¡DESCUBRE MÁS!
-            </StyledButton>
+            </StyledButton></Link>
           </Box>
         </BoxText>
         <Box  style={{display:'flex',flexDirection:'column',justifyContent:'center',  marginBottom:'5.2rem'}}>
