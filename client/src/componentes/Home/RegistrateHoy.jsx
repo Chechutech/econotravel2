@@ -103,7 +103,7 @@ const RegistrateHoy = () => {
             
           <Typ3  style={{color:'#4b7f55'}}>Descuento valido hasta 31/12/2022</Typ3>
           <Box style={{display:'flex',justifyContent:'center',}}>
-           <Link to='/registro'> <StyledButton>
+           <Link to='/registro'  style={{textDecoration: "none"}}> <StyledButton>
                   ¡REGISTRATE HOY!
             </StyledButton></Link>
           </Box>

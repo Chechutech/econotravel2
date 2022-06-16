@@ -57,8 +57,8 @@ const Registro = () => {
           <Avatar sx={{ m: 1 }} style={{ color: "#4b7f55" }}>
             <AppRegistrationIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
+          <Typography component="h1" variant="h5">Register 
+           
           </Typography>
           <Box
             component="form"
