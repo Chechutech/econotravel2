@@ -11,10 +11,11 @@ import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import { Login } from './componentes/Login/Login';
+import Registro from './componentes/registro/Registro'
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
-
+import ExpDestacadas from './componentes/Home/ExpDestacadas';
 function App() {
   
   const [data, setData] = useState([])
@@ -63,7 +64,8 @@ function App() {
 
       {/* <Home/>         */}
       {/* <Login/> */}
-         <Routes>    
+          <Routes> 
+               
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
             <Route path='/cartas' element={<Catalogo data={filterCatalogo} />} />  
@@ -72,9 +74,14 @@ function App() {
             <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>
             <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>
             <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>
-        
+           </Routes>
+          <Routes>
+            <Route path='/registro' element={<Registro />}/>
           </Routes>
-      {/* <DropdownUbicacion filterer={filterer}/>
+          
+          
+          
+          {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
       <DropdownDuracion/>  */}
       {/* <Filtro/> */}

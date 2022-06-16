@@ -1,6 +1,7 @@
 import { styled, Box, Typography, Button} from "@mui/material";
 import data from '../experiencias.json';
 import test from '../imagenes/logo4.png'
+import {Link} from 'react-router-dom'
 import ImageDto from "../imagenes/imgDto3.png";
 
 
@@ -102,9 +103,9 @@ const RegistrateHoy = () => {
             
           <Typ3  style={{color:'#4b7f55'}}>Descuento valido hasta 31/12/2022</Typ3>
           <Box style={{display:'flex',justifyContent:'center',}}>
-            <StyledButton>
+           <Link to='/registro'> <StyledButton>
                   ¡REGISTRATE HOY!
-            </StyledButton>
+            </StyledButton></Link>
           </Box>
         </BoxText>
        
