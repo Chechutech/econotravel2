@@ -18,7 +18,8 @@ import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
 import ComoFunciona from './componentes/Footer/Comofunciona';
 import PagoSeguro from './componentes/Footer/Pagoseguro';
-import Contact from './componentes/Footer/Contacto'
+import Contact from './componentes/Footer/Contacto';
+import Reserva from './componentes/Reserva/Reserva'
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
     <div className="App">
           <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
+        {/* <Reserva/> */}
 
       {/* <Home/>         */}
       {/* <Login/> */}
@@ -71,6 +73,7 @@ function App() {
             <Route path='/QuienesSomos' element={<InfoEmpresa/>}></Route>
             <Route path='/Contacto' element={<Contact/>}></Route>
             <Route path='/PagoSeguro' element={<PagoSeguro/>}></Route>
+            
 
            </Routes>
           <Routes>

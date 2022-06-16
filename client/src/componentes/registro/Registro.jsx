@@ -12,7 +12,7 @@ import Box from "@mui/material/Box";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import logo1 from '../../componentes/imagenes/logo1.png'
+import logo1 from '../../componentes/imagenes/logo1.png';
 
 
 
