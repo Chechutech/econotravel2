@@ -15,7 +15,6 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { styled, Card } from '@mui/material';
 import {Box} from  '@mui/material';
 import {Link} from 'react-router-dom'
-import { borderColor, margin } from '@mui/system';
 
 
 const StyledDot = styled(TimelineDot)(({ theme }) => ({
@@ -27,7 +26,7 @@ const TitleTypography = styled(Typography)(({ theme }) => ({
     color: "#FFFAFA",
     fontSize: 24,
     textAlign: "center",
-    padding: "2vh"
+    padding: "1vh"
 }));
 
 const SubTypography = styled(Typography)(({ theme }) => ({
@@ -41,14 +40,13 @@ const Parrafo = styled(Typography)(({ theme }) => ({
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
-    marginTop:"25vh",
-    height:"75vh",
+    marginTop:"27vh",
+    height:"80vh",
     display:"flex",
     flexDirection:"column",
     justify:"center",
     alignItem:"center",
     backgroundColor: "#FFFAFA",
-    paddingBottom:"5vh"
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -66,7 +64,7 @@ export default function ComoFunciona() {
         <StyledBox>
         <StyledCard>
         <TitleTypography>¿Cómo reservar?</TitleTypography>
-            <Timeline style={{height:"70vh", display:"flex", justify:"center", paddingBottom:"5vh"}}position="alternate" >
+            <Timeline style={{height:"50vh", display:"flex", justify:"center"}}position="alternate" >
                 <TimelineItem>
                     <TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">
                         Paso 1

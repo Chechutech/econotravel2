@@ -5,71 +5,91 @@ import ImagenChica from '../imagenes/woman-g3c4e3a00a_1920.jpg';
 import GifBike from '../imagenes/girlbike.gif';
 import {Link} from 'react-router-dom';
 
-const StyledBox = styled(Box)(({ theme }) => ({
-    backgroundColor: "#fffafa", 
-    height:"100vh", 
-    width:"100vw", 
-    display:"flex", 
-    flexDirection:"column",
-    justify:"center",
-    alignItem:"center",
+const TitleTypography = styled(Typography)(({ theme }) => ({
+    backgroundColor:"#DE541E",
+    color: "#FFFAFA",
+    fontSize: 24,
+    textAlign: "center",
+    padding: "1vh"
 }));
 
-const TitleTypography = styled(Typography)(({ theme }) => ({
-    fontSize: 24,
-    color: "#4B7F55",
-    textAlign: "center",
-    padding: "2vh"
+const SubTypography = styled(Typography)(({ theme }) => ({
+    color: "#DE541E",
+    fontSize: 20,
+    textAlign:"center",
 }));
 
 const Parrafo = styled(Typography)(({ theme }) => ({
     fontSize: 12,
-    alignText: "justify",
+    textAlign:"justify"
+}));
+
+const StyledTextCard = styled(Card)(({ theme }) => ({
+    width:"45vw",
+    height:"60vh",
+    display:"flex",
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
+    gap: "3vh",
+    padding:"5vh"
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
-    height: 500,
-    maxWidth: 700,
-    padding: "4vh"
+    width:"30vw",
+    height:"60vh",
+    display:"flex",
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
+    backgroundColor: "white",
+    padding:"1vh",
+    paddingBottom: "9vh"
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({ 
+    width:"100vw",
+    height:"110vh", 
+    display:"flex", 
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItem:"center",
 }));
 
 function InfoEmpresa() {
     return (
-        <StyledBox>
-            <TitleTypography>¿Quiénes somos?</TitleTypography>
-            <Grid container spacing={1} style={{height:"500", display:"flex", justify:"center", alignItem:"center"}}>
-                <Grid item xs={4}>
-                    <StyledCard>
-                        <TitleTypography>Misión</TitleTypography>
-                        <Parrafo> Nuestra empresa se fundó a raíz de un viaje que nuestra fundadora, Marina Herrán, realizó en bicicleta por Cataluña en el verano de 2001. Durante ese periodo, descubrió que las opciones turísticas que ofrecían ciudades como Barcelona, Girona y Reus dependían de transportes contaminantes y actividades poco respetuosas con la naturaleza y el entorno, algo que causaba un progresivo deterioro de los increíbles parajes naturales de Cataluña. </Parrafo>
+        <Box sx={{width:"100vw", display:"Flex", flexDirection:"row", alignItem:"center", justifyContent:"center"}}>
+                <StyledBox>
+            <TitleTypography gutterBottom variant="caption" component="div">¿Quiénes somos?</TitleTypography>
+            <Box sx={{width:"100vw", height:"20vw", display:"flex", flexDirection:"row", justifyContent:"center", gap:"3vh", marginTop:"2vh"}}>
+                    <StyledTextCard>
+                        <SubTypography gutterBottom variant="caption" component="div">Misión</SubTypography>
+                        <Parrafo> Nuestra empresa se fundó a raíz de un viaje que nuestra fundadora, Marina Herrán, realizó en bicicleta por Cataluña en el verano de 2001.</Parrafo>
+                        <Parrafo>Durante ese periodo, descubrió que las opciones turísticas que ofrecían ciudades como Barcelona, Girona y Reus dependían de transportes contaminantes y actividades poco respetuosas con la naturaleza y el entorno, algo que causaba un progresivo deterioro de los increíbles parajes naturales de Cataluña. </Parrafo>
                         <Parrafo> Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar una agencia de experiencias turísticas donde el respeto por la naturaleza fuera la principal prioridad. Así nació Econotravel Barcelona.</Parrafo>
                         <CardActions>
-                            <Button size="large" color="inherit"><Link to='/Contacto' style={{textDecoration:'none'}}>Contáctanos</Link></Button>
-                            <CardMedia component="img" width= "200" image={GifBike} sx={{width: 120}} alt="bike"/>
-                        </CardActions>
-                    </StyledCard>
-                </Grid>
+                            <CardMedia component="img" width= "20" image={GifBike} sx={{width: 130, position: "relative", left:"80vh"}} alt="bike"/>
 
-                <Grid item xs={2}>
+                        </CardActions>
+                    </StyledTextCard>
                     <StyledCard>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
-                                height="400"
-                                image={ImagenChica}
+                                image={ImagenChica} sx={{height:390, width:410}}
                                 alt="chica"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="caption" component="div">
+                                <Typography variant="caption" component="div">
                                     Marina Herrán, fundadora de Econotravel
                                 </Typography>
+                                
                             </CardContent>
                         </CardActionArea>
                     </StyledCard>
-                </Grid>
-
-            </Grid>
+                </Box>
         </StyledBox>
+            </Box>
     );
 }
 export default InfoEmpresa;
