@@ -1,5 +1,7 @@
 import React from 'react'
-import {List, ListItem, styled, Link } from '@mui/material';
+import {List, ListItem, styled, Typography } from '@mui/material';
+import { Link } from 'react-router-dom'
+
 
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
@@ -21,7 +23,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   }));
   
   
-  const StyledLink = styled(Link)(({ theme }) => ({
+  const StyledLink = styled(Typography)(({ theme }) => ({
     '&:hover': {
       color: '#DE541E',
     },
@@ -46,19 +48,19 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
       <>
         <List sx={{ display:'flex', justifyContent:'space-evenly',paddingBottom: '0.6rem',paddingTop: '0.6rem', width: '100vw'}}>
           <StyledListItem sx={{  marginRight:'1rem'}}>
-            <StyledLink  variant="body1" >¿Cómo funciona?</StyledLink>
+            <Link to='/ComoFunciona' style={{textDecoration:'none'}} ><StyledLink  variant="body1" >¿Cómo reservar?</StyledLink></Link>
           </StyledListItem>
   
           <StyledListItem  sx={{  marginRight:'1rem'}}>
-              <StyledLink  variant="body1" >¿Quienes somos?</StyledLink>
+             <Link to='/QuienesSomos' style={{textDecoration:'none'}} > <StyledLink  variant="body1" >¿Quienes somos?</StyledLink></Link>
           </StyledListItem>
   
           <StyledListItem sx={{  marginRight:'1rem'}}>
-              <StyledLink  variant="body1" >Contacto</StyledLink>
+          <Link to='/Contacto' style={{textDecoration:'none'}} ><StyledLink  variant="body1" >Contacto</StyledLink></Link>
           </StyledListItem>
 
           <StyledListItem >
-              <StyledLink  variant="body1" >Pago Seguro</StyledLink>
+          <Link to='/PagoSeguro' style={{textDecoration:'none'}} ><StyledLink  variant="body1" >Pago Seguro</StyledLink></Link>
           </StyledListItem>
           
         </List>

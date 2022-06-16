@@ -16,15 +16,15 @@ import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/Catalogo
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
-import ExpDestacadas from './componentes/Home/ExpDestacadas';
+import ComoFunciona from './componentes/Footer/Comofunciona';
+import PagoSeguro from './componentes/Footer/Pagoseguro';
+
+
 function App() {
   
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false)
-  const [ubicacion, setUbicacion] = useState(null)
-  const [transporte, setTransporte] = useState(null)
-  const [duracion, setDuracion] = useState(null)
  
   useEffect(() => {
     setLoading(true)
@@ -46,15 +46,6 @@ function App() {
       });
       if (loading) return <section>Cargando...</section>
 
-    const filterer = (ubicacion) => {
-        setUbicacion(ubicacion)
-        console.log(ubicacion)
-    }
-
-    const filterUbicacion = filterCatalogo.filter((card) => {
-      return card.etiquetas[0].ubicacion === ubicacion
-    });
-
   return (
     <ThemeProvider theme={theme}>
      
@@ -75,6 +66,11 @@ function App() {
             <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>
             <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>
             <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>
+            <Route path='/ComoFunciona' element={<ComoFunciona/>}> </Route>
+            <Route path='/QuienesSomos' element={<InfoEmpresa/>}></Route>
+            {/* <Route path='/Contacto' element={<Contact/>}></Route> */}
+            <Route path='/PagoSeguro' element={<PagoSeguro/>}></Route>
+
            </Routes>
           <Routes>
             <Route path='/registro' element={<Registro />}/>
