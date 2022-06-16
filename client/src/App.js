@@ -83,8 +83,8 @@ function App() {
         <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
 
-      {/* <Home/>        
-      <Login/> */}
+      {/* <Home/>         */}
+      <Login/>
          <Routes>    
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
