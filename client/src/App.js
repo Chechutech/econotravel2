@@ -9,17 +9,17 @@ import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
-import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import { Login } from './componentes/Login/Login';
-import DropdownUbicacion from './componentes/Catalogo/Filtros/Ubicacion/DropdownUbicacion';
-import DropdownTransporte from './componentes/Catalogo/Filtros/Transporte/DropdownTransporte';
-import DropdownDuracion from './componentes/Catalogo/Filtros/Duracion/DropdownDuracion';
+import Registro from './componentes/registro/Registro'
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
+import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
-import ComoFunciona from './componentes/Footer/ComoFunciona';
-import PagoSeguro from './componentes/Footer/PagoSeguro'
+import ComoFunciona from './componentes/Footer/Comofunciona';
+import PagoSeguro from './componentes/Footer/Pagoseguro';
+import Contact from './componentes/Footer/Contacto'
+
 
 function App() {
   
@@ -47,26 +47,39 @@ function App() {
       });
       if (loading) return <section>Cargando...</section>
 
-
   return (
     <ThemeProvider theme={theme}>
      
     <BrowserRouter>
     <div className="App">
-        <NavBar searcher={searchers} />
+          <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
 
       {/* <Home/>         */}
       {/* <Login/> */}
-         <Routes>    
+          <Routes> 
+               
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/> 
-            <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>               
-            <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>               
-            <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>               
-         </Routes>
-      {/* <DropdownUbicacion filterer={filterer}/>
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />} />  
+            <Route path='/destacadas' element={<ExpDestacadas/>}/>
+            <Route path='/destacadas/:id' element={<DetalleExperiencias />} />
+            <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>
+            <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>
+            <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>
+            <Route path='/ComoFunciona' element={<ComoFunciona/>}> </Route>
+            <Route path='/QuienesSomos' element={<InfoEmpresa/>}></Route>
+            <Route path='/Contacto' element={<Contact/>}></Route>
+            <Route path='/PagoSeguro' element={<PagoSeguro/>}></Route>
+
+           </Routes>
+          <Routes>
+            <Route path='/registro' element={<Registro />}/>
+          </Routes>
+          
+          
+          
+          {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
       <DropdownDuracion/>  */}
       {/* <Filtro/> */}

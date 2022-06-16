@@ -110,7 +110,7 @@ function NavBar({searcher}) {
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <Link to='/cartas'> 
+              <Link to='/cartas' style={{textDecoration:'none'}}> 
               <StyledInputBase onChange={searcher}
                 placeholder="Buscar..."
                 inputProps={{ 'aria-label': 'search' }}

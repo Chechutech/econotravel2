@@ -12,7 +12,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import CardTravelIcon from '@mui/icons-material/CardTravel';
 import PaymentIcon from '@mui/icons-material/Payment';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { styled, Card, Box } from '@mui/material';
+import { styled, Card } from '@mui/material';
+import {Link} from 'react-router-dom'
+
 
 const StyledDot = styled(TimelineDot)(({ theme }) => ({
     color: "#DE541E"
@@ -48,7 +50,7 @@ export default function ComoFunciona() {
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <SubTypography variant="h6" component="span">Regístrate</SubTypography>
-                        <Typography variant="body2" color="text.secondary" align="justify">Si ya tienes una cuenta, Inicia Sesión</Typography>
+                        <Typography variant="body2" color="text.secondary" align="justify">Si ya tienes una cuenta, <Link to='/IniciaSesion' style={{textDecoration:'none'}}>Inicia Sesión</Link></Typography>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
