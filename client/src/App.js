@@ -55,8 +55,7 @@ function App() {
     <div className="App">
           <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
-        {/* <Reserva/> */}
-
+        {/* 
       {/* <Home/>         */}
       {/* <Login/> */}
           <Routes> 
