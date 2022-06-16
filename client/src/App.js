@@ -18,6 +18,7 @@ import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
 import ComoFunciona from './componentes/Footer/Comofunciona';
 import PagoSeguro from './componentes/Footer/Pagoseguro';
+import Contact from './componentes/Footer/Contacto'
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
      
     <BrowserRouter>
     <div className="App">
-        <NavBar searcher={searchers} />
+          <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
 
       {/* <Home/>         */}
@@ -68,7 +69,7 @@ function App() {
             <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>
             <Route path='/ComoFunciona' element={<ComoFunciona/>}> </Route>
             <Route path='/QuienesSomos' element={<InfoEmpresa/>}></Route>
-            {/* <Route path='/Contacto' element={<Contact/>}></Route> */}
+            <Route path='/Contacto' element={<Contact/>}></Route>
             <Route path='/PagoSeguro' element={<PagoSeguro/>}></Route>
 
            </Routes>

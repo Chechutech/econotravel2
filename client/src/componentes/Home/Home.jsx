@@ -8,6 +8,7 @@ function Home (){
         <>
             <Hero/>
             <ExpDestacadas id='2'  id2='4'  id3='6'/> 
+            <Contactanos/>
             <RegistrateHoy />
             
         </>
