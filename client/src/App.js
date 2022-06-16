@@ -9,12 +9,8 @@ import "@fontsource/roboto-mono";
 import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
-import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import { Login } from './componentes/Login/Login';
-import DropdownUbicacion from './componentes/Catalogo/Filtros/Ubicacion/DropdownUbicacion';
-import DropdownTransporte from './componentes/Catalogo/Filtros/Transporte/DropdownTransporte';
-import DropdownDuracion from './componentes/Catalogo/Filtros/Duracion/DropdownDuracion';
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
@@ -57,24 +53,6 @@ function App() {
       return card.etiquetas[0].ubicacion === ubicacion
     });
 
-    // const filterer2 = (transporte) => {
-    //   setTransporte(transporte)
-    //   console.log(transporte)
-    // }
-
-    // const filterTransporte = filterUbicacion.filter((card) => {
-    //   return card.etiquetas[1].transporte == transporte
-    // });
-
-    // const filterer3 = (duracion) => {
-    //   setDuracion(duracion)
-    //   console.log(duracion)
-    // }
-
-    // const filterDuracion = filterTransporte.filter((card) => {
-    //   return card.etiquetas[2].duracion === duracion
-    // });
-
   return (
     <ThemeProvider theme={theme}>
      
@@ -88,11 +66,14 @@ function App() {
          <Routes>    
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/> 
-            <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>               
-            <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>               
-            <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>               
-         </Routes>
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />} />  
+            <Route path='/destacadas' element={<ExpDestacadas/>}/>
+            <Route path='/destacadas/:id' element={<DetalleExperiencias />} />
+            <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>
+            <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>
+            <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>
+        
+          </Routes>
       {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
       <DropdownDuracion/>  */}
