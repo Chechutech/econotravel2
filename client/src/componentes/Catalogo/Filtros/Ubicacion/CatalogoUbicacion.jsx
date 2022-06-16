@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {Link, Outlet,} from 'react-router-dom'
 import { styled } from '@mui/material/styles';
 import { Card, CardActions,Box, CardContent, CardMedia, Grid, Paper, Stack, Container, Button, Typography } from '@mui/material';
-import Filtro from './Filtros/Filtro';
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import Filtro from '../Filtro';
 
 
 
@@ -25,17 +27,35 @@ const Item = styled(Paper)(({ theme }) => ({
    }));
   
    
-function Catalogo({ data }) {
+function CatalogoUbicacion() {
+  const {ubi} = useParams()
 
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    setLoading(true)
+    axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
+      .then(res => {
+        console.log(res.data)
+        setData(res.data);
+        setLoading(false)
+      })
+  }, [])
+    console.log(data)
+
+  const findUbicaciones = data.filter(experiencias => experiencias.etiquetas[0].ubicacion == ubi);
+  console.log(findUbicaciones)
+  if (loading) return <section>Cargando...</section>;
 
   return (
         <>
       < Filtro/>
-      <StyledContainer style={{paddingTop:'14rem'}}>
+      <StyledContainer style={{paddingTop:'4rem'}}>
      
                    
             <Grid container spacing={10}>
-               {data.map((exp, index) => (
+               {findUbicaciones.map((exp, index) => (
                  <Grid key={index} item xs={12} sm={6} md={4}>
                   <Card  sx={{ maxWidth: 330}} style={{height:"35rem"}} >
                     <CardMedia
@@ -69,4 +89,4 @@ function Catalogo({ data }) {
    </>
       )
   }
-  export default Catalogo
+  export default CatalogoUbicacion
