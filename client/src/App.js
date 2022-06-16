@@ -6,7 +6,7 @@ import NavBar from './componentes/NavBar/NavBar';
 import theme from './componentes/Styles/Theme';
 import DetalleExperiencias from './componentes/DetalleExperiencias/DetalleExperiencias';
 import "@fontsource/roboto-mono";
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider} from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import { Login } from './componentes/Login/Login';
@@ -18,7 +18,8 @@ import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDu
 import ComoFunciona from './componentes/Footer/ComoFunciona';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import PagoSeguro from './componentes/Footer/PagoSeguro';
-import Contact from './componentes/Footer/Contacto'
+import Contact from './componentes/Footer/Contacto';
+
 
 
 function App() {
@@ -71,9 +72,6 @@ function App() {
               <Route path='/registro' element={<Registro />}/>
           </Routes>
         
-      {/* <ComoFunciona/>
-      <InfoEmpresa/>
-      <PagoSeguro/> */}
       <Footer/>  
     </div>
       </BrowserRouter>

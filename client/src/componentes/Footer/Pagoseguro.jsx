@@ -1,62 +1,109 @@
 import * as React from 'react';
-import { styled, Box, Button, Card, CardActionArea, CardContent, CardActions, Typography, CardMedia, Grid, Paper } from '@mui/material';
+import { styled, Box, Card, Typography, CardMedia, Grid } from '@mui/material';
 import Tarjetacc from '../imagenes/visa_mc.jpg';
 import TransferIcon from '../imagenes/transfer_icon.jpg';
-import Paypal from '../imagenes/paypalp.png';
+import Paypal from '../imagenes/paypal.png';
 
-const StyledBox = styled(Box)(({ theme }) => ({
-    height:"600px", 
-    width:"100vw", 
+const StyledBox = styled(Box)(({ theme }) => ({ 
+    width:"100vw",
+    height:"110vh", 
     display:"flex", 
-    backgroundColor: "#888822", 
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#FFFAFA",
+    marginTop:"25vh",
+    gap:"2vh"
+}));
+
+const TitleTypography = styled(Typography)(({ theme }) => ({
+    width:"100vw",
+    backgroundColor: "#DE541E",
+    color: "#FFFAFA",
+    fontSize: 24,
+    textAlign: "center",
+    padding: "2vh"
+}));
+
+const SubTypography = styled(Typography)(({ theme }) => ({
+    color: "#DE541E",
+    fontSize: 18,
+    textAlign:"center",
+}));
+
+const Parrafo = styled(Typography)(({ theme }) => ({
+    fontSize: 12,
+    textAlign:"justify"
+}));
+
+const StyledTextCard = styled(Card)(({ theme }) => ({
+    width:"25vw",
+    height:"55vh",
+    display:"flex",
     flexDirection:"column",
     justify:"center",
     alignItem:"center",
-    boxShadow:1,
+    gap: "4vh",
+    padding:"3vh",
+    boxShadow:1
 }));
+
+const StyledCard = styled(Card)(({ theme }) => ({
+    width:"85vw",
+    height:"70vh",
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    backgroundColor: "#DE541E",
+    alignItems:"center",
+    gap: "5vh",
+    padding: "5vh"
+}));
+
 
 function PagoSeguro() {
     return (
         <StyledBox>
-            <Card sx={{ height: 500, maxWidth: 1200 }}>
-            <Typography gutterBottom variant="h4" component="div" padding="5vh" align="center">Pago Seguro</Typography>
-            <Typography variant="body2" color="text.secondary" align="justify" padding="3vh">
+            <TitleTypography>Pago Seguro</TitleTypography>
+            <StyledCard>
+            <Typography>
             Los medios de pago aceptados serán: </Typography>
             <Grid container spacing={1}>
                 <Grid item xs={4}>
-                    <Card sx={{ height: 400, width: 350 }}>
+                    <StyledTextCard>
                     <CardMedia
                                 component="img"
                                 height="100"
-                                width="50"
+                                width="20"
                                 image={Tarjetacc}
                                 alt="tarjeta credito"
                         />
-                        <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center">Tarjeta de Crédito o Débito </Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="3vh"> También puedes pagar tu compra directamente con tu tarjeta de crédito a través de la plataforma Redsys.</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Este tipo de pago viene asegurado por el BBVA, donde podrás terminar el proceso en sus servidores seguros. </Typography>
-                    </Card>
+                        <SubTypography>Tarjeta de Crédito o Débito </SubTypography>
+                        <Parrafo>Pagar tu compra directamente con tu tarjeta de crédito a través de la plataforma Redsys.</Parrafo>
+                        <Parrafo>Este tipo de pago viene asegurado por el BBVA, donde podrás terminar el proceso en sus servidores seguros.</Parrafo>
+                    </StyledTextCard>
                 </Grid>
 
                 <Grid item xs={4}>
-                <Card sx={{ height: 400, width: 350 }}>
+                <StyledTextCard>
                     <CardMedia
                                 component="img"
                                 height="100"
                                 width="50"
-                                image={TransferIcon}
+                                justify="center"
+                                image={TransferIcon} sx={{width:150}}
                                 alt="transferencia bancaria"
                         />
-                        <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center">Transferencia bancaria</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Puedes hacer un ingreso por el valor del importe total de la compra directamente en nuestra cuenta bancaria. </Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Hay que tener en cuenta que los plazos de las transferencias varían según el banco y puede tardar entre 2-3 días laborales.</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh">Número de cuenta : ESXX-XXXX-XXXX-XX-XXXXXXXXXX</Typography>
+                        <SubTypography>Transferencia bancaria</SubTypography>
+                        <Parrafo> Puedes hacer un ingreso por el valor del importe total de la compra directamente en nuestra cuenta bancaria. </Parrafo>
+                        <Parrafo> Hay que tener en cuenta que los plazos de las transferencias varían según el banco y puede tardar entre 2-3 días laborales.</Parrafo>
+                        <Parrafo>Número de cuenta : ESXX-XXXX-XXXX-XX-XXXXXXXXXX</Parrafo>
 
-                    </Card>
+                    </StyledTextCard>
                 </Grid>
 
                 <Grid item xs={4}>
-                <Card sx={{ height: 400, width: 350 }}>
+                <StyledTextCard>
                     <CardMedia
                                 component="img"
                                 height="100"
@@ -64,16 +111,15 @@ function PagoSeguro() {
                                 image={Paypal}
                                 alt="Paypal logo"
                         />
-                        <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center">Pago a través de Paypal</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="3vh"> Selecciona PayPal como la forma de pago al completar la compra.</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Esto te redirigirá a la página web de PayPal para continuar con el pago. </Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Si ya eres cliente de PayPal, debes iniciar sesión con tus datos de usuario y confirmar el pago. Si aún no eres usuario de PayPal, debes crear una cuenta en PayPal y después confirmar el pago.</Typography>
+                        <SubTypography>Pago por Paypal</SubTypography>
+                        <Parrafo> Puedes seleccionar PayPal como la forma de pago al completar la compra.</Parrafo>
+                        <Parrafo> Si ya eres cliente de PayPal, debes iniciar sesión con tus datos de usuario y confirmar el pago. Si aún no eres usuario de PayPal, debes crear una cuenta en PayPal y después confirmar el pago.</Parrafo>
 
-                    </Card>
+                    </StyledTextCard>
                 </Grid>
 
             </Grid>
-            </Card>
+            </StyledCard>
         </StyledBox>
     );
 }

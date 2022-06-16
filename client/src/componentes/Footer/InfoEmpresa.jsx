@@ -26,7 +26,7 @@ const Parrafo = styled(Typography)(({ theme }) => ({
 
 const StyledTextCard = styled(Card)(({ theme }) => ({
     width:"45vw",
-    height:"60vh",
+    height:"50vh",
     display:"flex",
     flexDirection:"column",
     justify:"center",
@@ -37,7 +37,7 @@ const StyledTextCard = styled(Card)(({ theme }) => ({
 
 const StyledCard = styled(Card)(({ theme }) => ({
     width:"30vw",
-    height:"60vh",
+    height:"50vh",
     display:"flex",
     flexDirection:"column",
     justify:"center",
@@ -61,14 +61,13 @@ function InfoEmpresa() {
         <Box sx={{width:"100vw", display:"Flex", flexDirection:"row", alignItem:"center", justifyContent:"center"}}>
                 <StyledBox>
             <TitleTypography gutterBottom variant="caption" component="div">¿Quiénes somos?</TitleTypography>
-            <Box sx={{width:"100vw", height:"20vw", display:"flex", flexDirection:"row", justifyContent:"center", gap:"3vh", marginTop:"2vh"}}>
+            <Box sx={{width:"100vw", height:"13vw", display:"flex", flexDirection:"row", justifyContent:"center", gap:"3vh", marginTop:"2vh"}}>
                     <StyledTextCard>
                         <SubTypography gutterBottom variant="caption" component="div">Misión</SubTypography>
                         <Parrafo> Nuestra empresa se fundó a raíz de un viaje que nuestra fundadora, Marina Herrán, realizó en bicicleta por Cataluña en el verano de 2001.</Parrafo>
                         <Parrafo>Durante ese periodo, descubrió que las opciones turísticas que ofrecían ciudades como Barcelona, Girona y Reus dependían de transportes contaminantes y actividades poco respetuosas con la naturaleza y el entorno, algo que causaba un progresivo deterioro de los increíbles parajes naturales de Cataluña. </Parrafo>
                         <Parrafo> Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar una agencia de experiencias turísticas donde el respeto por la naturaleza fuera la principal prioridad. Así nació Econotravel Barcelona.</Parrafo>
                         <CardActions>
-                            <CardMedia component="img" width= "20" image={GifBike} sx={{width: 130, position: "relative", left:"80vh"}} alt="bike"/>
 
                         </CardActions>
                     </StyledTextCard>
@@ -76,7 +75,7 @@ function InfoEmpresa() {
                         <CardActionArea>
                             <CardMedia
                                 component="img"
-                                image={ImagenChica} sx={{height:390, width:410}}
+                                image={ImagenChica} sx={{height:300, width:410}}
                                 alt="chica"
                             />
                             <CardContent>
