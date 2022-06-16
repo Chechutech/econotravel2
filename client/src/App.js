@@ -11,7 +11,6 @@ import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
-import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import { Login } from './componentes/Login/Login';
 import DropdownUbicacion from './componentes/Catalogo/Filtros/Ubicacion/DropdownUbicacion';
 import DropdownTransporte from './componentes/Catalogo/Filtros/Transporte/DropdownTransporte';
@@ -19,7 +18,6 @@ import DropdownDuracion from './componentes/Catalogo/Filtros/Duracion/DropdownDu
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
-
 
 function App() {
   
@@ -85,15 +83,15 @@ function App() {
         <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
 
-      {/* <Home/>        
-      <Login/> */}
+      {/* <Home/>         */}
+      {/* <Login/> */}
          <Routes>    
             <Route index element={<Home />} />
-
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
-            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />} />  
-            <Route path='/destacadas' element={<ExpDestacadas/>}/>
-            <Route path='/destacadas/:id' element={<DetalleExperiencias />} />
+            <Route path='/cartas' element={<Catalogo data={filterCatalogo} />}/> 
+            <Route path='/ubicacion/:ubi' element={<CatalogoUbicacion/>}/>               
+            <Route path='/transporte/:trans' element={<CatalogoTransporte/>}/>               
+            <Route path='/duracion/:dur' element={<CatalogoDuracion/>}/>               
          </Routes>
       {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
