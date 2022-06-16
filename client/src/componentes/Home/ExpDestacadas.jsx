@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import {Link} from 'react-router-dom'
 import data from '../experiencias.json'
 import {Grid,Container, Box, Paper, styled,Card, CardMedia,CardContent, Stack, Item,Button, Typography, CardActions} from '@mui/material'
 import Filtro from "../Catalogo/Filtros/Filtro.jsx";
@@ -40,11 +41,11 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
 
 
     const exp1= data.filter(exp=> exp.id == id)
-    const exp2= data.filter(exp=> exp.id==id2)
-    const exp3= data.filter(exp=> exp.id==id3)
-  const array = [...exp1, ...exp2, ...exp3]
+    const exp2= data.filter(exp=> exp.id == id2)
+    const exp3= data.filter(exp=> exp.id == id3)
+    const array = [...exp1, ...exp2, ...exp3]
   
-console.log(array)
+    console.log(array)
   
 
     return (  
@@ -64,7 +65,7 @@ console.log(array)
                               alt="bici montaña"
                               image={exp.img} />
                    <CardContent>
-                   <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55", height:'48px' }}>{exp.titulo}</Typography>  
+                  <Link to={`/destacadas/${exp.titulo}`} style={{textDecoration: "none"}}> <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55", height:'48px' }}>{exp.titulo}</Typography> </Link>
 
                <Stack direction="row" spacing={1}>
                    <Item2>Chip One1</Item2>
