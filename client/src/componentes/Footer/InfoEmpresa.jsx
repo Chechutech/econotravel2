@@ -2,42 +2,57 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Button, Card, CardActionArea, CardContent, CardActions, Typography, CardMedia, Grid, Paper } from '@mui/material';
 import ImagenChica from '../imagenes/woman-g3c4e3a00a_1920.jpg';
-import GifBike from '../imagenes/girlbike.gif'
+import GifBike from '../imagenes/girlbike.gif';
+import {Link} from 'react-router-dom';
 
+const StyledBox = styled(Box)(({ theme }) => ({
+    backgroundColor: "#888822", 
+    height:"600px", 
+    width:"100vw", 
+    display:"flex", 
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
+    boxShadow:1,
+}));
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    margin: '0.75rem',
+const TitleTypography = styled(Typography)(({ theme }) => ({
+    fontSize: 24,
     color: "#4B7F55",
+    textAlign: "center",
+    padding: "2vh"
+}));
+
+const Parrafo = styled(Typography)(({ theme }) => ({
+    fontSize: 12,
+    alignText: "justify",
+}));
+
+const StyledCard = styled(Card)(({ theme }) => ({
+    height: 500,
+    maxWidth: 700,
+    padding: "4vh"
 }));
 
 function InfoEmpresa() {
     return (
-        <Box sx={{ flexGrow: 1, margin: '8rem' }}>
-            <Grid container spacing={1}>
-                <Grid item xs={8}>
-                    <Card sx={{ height: 500, maxWidth: 700, padding: "4vh"}}>
-                        <Typography gutterBottom variant="h5" component="div" padding="3vh" align="center">Misión</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Nuestra empresa se fundó a raíz de un viaje que nuestra fundadora, Marina Herrán, realizó en bicicleta por Cataluña en el verano de 2001. </Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Durante ese periodo, descubrió que las opciones turísticas que ofrecían ciudades como Barcelona, Girona y Reus dependían de transportes contaminantes y actividades poco respetuosas con la naturaleza y el entorno, algo que causaba un progresivo deterioro de los increíbles parajes naturales de Cataluña. </Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify" padding="2vh"> Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar una agencia de experiencias turísticas donde el respeto por la naturaleza fuera la principal prioridad. Así nació Econotravel Barcelona.</Typography>
-                        <CardActions style={{display:"flex", flexDirection:"flexEnd"}}>
-                            <Button size="large" color="inherit">Contáctanos</Button>
-                        <CardMedia
-                                component="img"
-                                width= "200"
-                                image={GifBike} sx={{width: 120, }}
-                                alt="bike"
-                        />
+        <StyledBox>
+            <TitleTypography>¿Quiénes somos?</TitleTypography>
+            <Grid container spacing={1} style={{height:"500", display:"flex", justify:"center", alignItem:"center"}}>
+                <Grid item xs={4}>
+                    <StyledCard>
+                        <TitleTypography>Misión</TitleTypography>
+                        <Parrafo> Nuestra empresa se fundó a raíz de un viaje que nuestra fundadora, Marina Herrán, realizó en bicicleta por Cataluña en el verano de 2001. Durante ese periodo, descubrió que las opciones turísticas que ofrecían ciudades como Barcelona, Girona y Reus dependían de transportes contaminantes y actividades poco respetuosas con la naturaleza y el entorno, algo que causaba un progresivo deterioro de los increíbles parajes naturales de Cataluña. </Parrafo>
+                        <Parrafo> Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar una agencia de experiencias turísticas donde el respeto por la naturaleza fuera la principal prioridad. Así nació Econotravel Barcelona.</Parrafo>
+                        <CardActions>
+                            <Button size="large" color="inherit"><Link to='/Contacto' style={{textDecoration:'none'}}>Contáctanos</Link></Button>
+                            <CardMedia component="img" width= "200" image={GifBike} sx={{width: 120}} alt="bike"/>
                         </CardActions>
-                    </Card>
+                    </StyledCard>
                 </Grid>
 
-                <Grid item xs={4}>
-                    <Card sx={{ height: 500, maxWidth: 500, padding: "5vh" }}>
+                <Grid item xs={2}>
+                    <StyledCard>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -51,11 +66,11 @@ function InfoEmpresa() {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
-                    </Card>
+                    </StyledCard>
                 </Grid>
 
             </Grid>
-        </Box>
+        </StyledBox>
     );
 }
 export default InfoEmpresa;

@@ -1,12 +1,23 @@
 import * as React from 'react';
-import { Box, Button, Card, CardActionArea, CardContent, CardActions, Typography, CardMedia, Grid, Paper } from '@mui/material';
+import { styled, Box, Button, Card, CardActionArea, CardContent, CardActions, Typography, CardMedia, Grid, Paper } from '@mui/material';
 import Tarjetacc from '../imagenes/visa_mc.jpg';
 import TransferIcon from '../imagenes/transfer_icon.jpg';
-import Paypal from '../imagenes/paypalp.png'
+import Paypal from '../imagenes/paypalp.png';
+
+const StyledBox = styled(Box)(({ theme }) => ({
+    height:"600px", 
+    width:"100vw", 
+    display:"flex", 
+    backgroundColor: "#888822", 
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
+    boxShadow:1,
+}));
 
 function PagoSeguro() {
     return (
-        <Box sx={{ flexGrow: 1, margin: '8rem' }}>
+        <StyledBox>
             <Card sx={{ height: 500, maxWidth: 1200 }}>
             <Typography gutterBottom variant="h4" component="div" padding="5vh" align="center">Pago Seguro</Typography>
             <Typography variant="body2" color="text.secondary" align="justify" padding="3vh">
@@ -63,7 +74,7 @@ function PagoSeguro() {
 
             </Grid>
             </Card>
-        </Box>
+        </StyledBox>
     );
 }
 export default PagoSeguro;
