@@ -18,15 +18,14 @@ import DropdownDuracion from './componentes/Catalogo/Filtros/Duracion/DropdownDu
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
+import ComoFunciona from './componentes/Footer/ComoFunciona';
+import PagoSeguro from './componentes/Footer/PagoSeguro'
 
 function App() {
   
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false)
-  const [ubicacion, setUbicacion] = useState(null)
-  const [transporte, setTransporte] = useState(null)
-  const [duracion, setDuracion] = useState(null)
  
   useEffect(() => {
     setLoading(true)
@@ -48,32 +47,6 @@ function App() {
       });
       if (loading) return <section>Cargando...</section>
 
-    const filterer = (ubicacion) => {
-        setUbicacion(ubicacion)
-        console.log(ubicacion)
-    }
-
-    const filterUbicacion = filterCatalogo.filter((card) => {
-      return card.etiquetas[0].ubicacion === ubicacion
-    });
-
-    // const filterer2 = (transporte) => {
-    //   setTransporte(transporte)
-    //   console.log(transporte)
-    // }
-
-    // const filterTransporte = filterUbicacion.filter((card) => {
-    //   return card.etiquetas[1].transporte == transporte
-    // });
-
-    // const filterer3 = (duracion) => {
-    //   setDuracion(duracion)
-    //   console.log(duracion)
-    // }
-
-    // const filterDuracion = filterTransporte.filter((card) => {
-    //   return card.etiquetas[2].duracion === duracion
-    // });
 
   return (
     <ThemeProvider theme={theme}>
@@ -97,6 +70,9 @@ function App() {
       <DropdownTransporte />
       <DropdownDuracion/>  */}
       {/* <Filtro/> */}
+      <ComoFunciona/>
+      <InfoEmpresa/>
+      <PagoSeguro/>
          <Footer/>  
 
          
