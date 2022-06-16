@@ -3,6 +3,8 @@ import axios from "axios";
 import {Link} from 'react-router-dom'
 import data from '../experiencias.json'
 import {Grid,Container, Box, Paper, styled,Card, CardMedia,CardContent, Stack, Item,Button, Typography, CardActions} from '@mui/material'
+import Filtro from "../Catalogo/Filtros/Filtro.jsx";
+
 
 const Item2 = styled(Paper)(({ theme }) => ({
     backgroundColor: "#FFFAFA",
@@ -50,6 +52,7 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
       <>
         
     <Typography variant="h1" style={{fontSize:'2rem', textAlign:'center', fontWeight:'bold', color:'#DE541E'}} >EXPERIENCIAS DESTACADAS</Typography>
+    <Filtro/>
     <StyledContainer > 
     
           <Grid  container spacing={10} >

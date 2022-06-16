@@ -11,11 +11,17 @@ import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
+<<<<<<< HEAD
 import ExpDestacadas from './componentes/Home/ExpDestacadas';
+=======
+>>>>>>> 54596cd36c52b67c099026f21470d258f73b998f
 import { Login } from './componentes/Login/Login';
-import DropdownUbicacion from './componentes/Catalogo/Filtros/DropdownUbicacion';
-import DropdownTransporte from './componentes/Catalogo/Filtros/DropdownTransporte';
-import DropdownDuracion from './componentes/Catalogo/Filtros/DropdownDuracion'
+import DropdownUbicacion from './componentes/Catalogo/Filtros/Ubicacion/DropdownUbicacion';
+import DropdownTransporte from './componentes/Catalogo/Filtros/Transporte/DropdownTransporte';
+import DropdownDuracion from './componentes/Catalogo/Filtros/Duracion/DropdownDuracion';
+import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
+import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
+import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
 
 
 function App() {
@@ -80,12 +86,8 @@ function App() {
     <BrowserRouter>
     <div className="App">
         <NavBar searcher={searchers} />
+        {/* <CatalogoS/> */}
 
-
-     
-      {/* <InfoEmpresa/>
-      <ComoFunciona/>
-      <PagoSeguro/> */}
       {/* <Home/>        
       <Login/> */}
          <Routes>    
@@ -96,11 +98,13 @@ function App() {
             <Route path='/destacadas' element={<ExpDestacadas/>}/>
             <Route path='/destacadas/:id' element={<DetalleExperiencias />} />
          </Routes>
-      <DropdownUbicacion filterer={filterer}/>
+      {/* <DropdownUbicacion filterer={filterer}/>
       <DropdownTransporte />
-      <DropdownDuracion/>
-      <Catalogo data={filterUbicacion}/>
+      <DropdownDuracion/>  */}
+      {/* <Filtro/> */}
          <Footer/>  
+
+         
       
          </div>
     </BrowserRouter>
@@ -109,7 +113,7 @@ function App() {
 }
 export default App;
 
-{/*<Catalogo catalogo={filterCatalogo}></Catalogo>
+{/* <Catalogo catalogo={filterCatalogo}></Catalogo>
 <DetalleExperiencias i='4'/>
 <Home/>
-<Footer/>*/}
+<Footer/> */}
