@@ -1,6 +1,6 @@
 import React from "react";
 import {Routes, Route} from "react-router-dom";
-import {Box, Typography, styled, Paper, FormControlLabel,Checkbox, Button, TextField} from '@mui/material'
+import {Box, Typography,Grid, styled, Paper, FormControlLabel,Checkbox, Button, TextField} from '@mui/material'
 
 
 
@@ -21,53 +21,83 @@ const BoxContacto= styled(Box)(({theme}) => ({
    
     
   }));
+  const StyledPaper= styled(Paper)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+        height:'36vh',
+        backgroundColor: '#FFFAFA',
+        width: '58vw',
+        display: "flex",
+        flexDirection: 'column',
+        padding: '2rem',
+        borderRadius: '1rem',
+        justifyContent: 'space-between'
+        },
+        
+        [theme.breakpoints.up('sm')]: {
+            height:'42vh',
+            backgroundColor: '#FFFAFA',
+            width: '30vw',
+            display: "flex",
+            flexDirection: 'column',
+            padding: '2rem',
+            borderRadius: '1rem',
+            justifyContent: 'space-between'
+         },
+         [theme.breakpoints.up('xl')]: {
+            height:'36vh',
+            backgroundColor: '#FFFAFA',
+            width: '28vw',
+            display: "flex",
+            flexDirection: 'column',
+            padding: '2rem',
+            borderRadius: '1rem',
+            justifyContent: 'space-between'
+         }
+
+}));
+
+const ColorButton = styled(Button)(({ theme }) => ({
+    backgroundColor: '#DE541E',
+    '&:hover': {
+      backgroundColor: '#D4EAC8',
+      color:'black',
+
+    },
+    '&:focus': {
+        backgroundColor: '#4B7F55',
+
+      },
+    textTransform: 'none',
+    height: '2.4rem'
+  }));
+
+  const StyledTextField = styled(TextField)({
+        height: '0.4rem',
+  
+    });
 
 export const Login = () => {
     return (
         <Box style={{height:'100vh', display:'flex',  width: '100vw',justifyContent:'center', alignItems:'center' }}>
-        <BoxContacto className='contact-page'>
-        <div className="wrapper" style={{ display: "flex",
-      flexDirection: "column",
-      border: "1px solid black",
-      padding: 5,
-      alignItems: "center"}}>
-              <TextField
-                hintText="Enter your email"
-                floatingLabelText="Emal"
-                floatingLabelFixed
-                onChange={(event, newValue) =>
-                  this.setState({ username: newValue })
-                }
-              />
-              <TextField
-                type="password"
-                hintText="Enter your Password"
-                floatingLabelText="Password"
-                floatingLabelFixed
-                onChange={(event, newValue) =>
-                  this.setState({ password: newValue })
-                }
-              />
-              <div className="buttonsWrapper" style={{display: "flex",
-      flexDirection: "row",
-      padding: 5,
-      alignItems: "center"}}>
-                <Button
-                  label="Login"
-                  primary={true}
-                  onClick={event => this.handleSubmit(event)}
-                />
-                <Button
-                  label="Reset"
-                  primary={true}
-                  onClick={event => this.handleReset(event)}
-                />
-                <a href="./" alt="" title="">
-                  Link
-                </a>
-              </div>
-              </div>
-           
+        <BoxContacto >
+        <Grid> 
+           <StyledPaper elevation= {0} >
+           <Box>
+                    <StyledTextField 
+           id="standard-basic" label="Username" variant="standard"
+           size="small" fullWidth />
+                </Box>
+                <Box>
+                    <StyledTextField 
+           id="standard-basic" label="Password" variant="standard"
+           size="small" fullWidth />
+                </Box>
+
+               
+                <ColorButton variant="contained">Login</ColorButton>
+                <Typography variant="body1" color="initial"> Haz click aquí si todavia no te has registrado</Typography>
+           </StyledPaper>
+        </Grid>
         </BoxContacto>
         </Box>
     )

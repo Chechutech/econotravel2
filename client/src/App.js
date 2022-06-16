@@ -10,12 +10,10 @@ import { ThemeProvider } from '@mui/material';
 import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
-import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import { Login } from './componentes/Login/Login';
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
-
 
 function App() {
   
@@ -63,8 +61,8 @@ function App() {
         <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
 
-      {/* <Home/>        
-      <Login/> */}
+      {/* <Home/>         */}
+      {/* <Login/> */}
          <Routes>    
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
