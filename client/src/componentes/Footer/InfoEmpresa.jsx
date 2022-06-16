@@ -6,14 +6,13 @@ import GifBike from '../imagenes/girlbike.gif';
 import {Link} from 'react-router-dom';
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    backgroundColor: "#888822", 
-    height:"600px", 
+    backgroundColor: "#fffafa", 
+    height:"100vh", 
     width:"100vw", 
     display:"flex", 
     flexDirection:"column",
     justify:"center",
     alignItem:"center",
-    boxShadow:1,
 }));
 
 const TitleTypography = styled(Typography)(({ theme }) => ({

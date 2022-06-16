@@ -23,7 +23,8 @@ const StyledDot = styled(TimelineDot)(({ theme }) => ({
 }));
 
 const TitleTypography = styled(Typography)(({ theme }) => ({
-    color: "#4B7F55",
+    backgroundColor:"#DE541E",
+    color: "#FFFAFA",
     fontSize: 24,
     textAlign: "center",
     padding: "2vh"
@@ -40,23 +41,23 @@ const Parrafo = styled(Typography)(({ theme }) => ({
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
-    marginTop:"10vh",
-    height:"80vh",
+    marginTop:"25vh",
+    height:"75vh",
     display:"flex",
-    flexDirection:"column",
-    alignItem:"center",
-    padding:"2vh"
-}));
-
-const StyledBox = styled(Box)(({ theme }) => ({
-    height:"90vh", 
-    width:"100vw", 
-    display:"flex", 
-    backgroundColor: "#888822", 
     flexDirection:"column",
     justify:"center",
     alignItem:"center",
-    boxShadow:1,
+    backgroundColor: "#FFFAFA",
+    paddingBottom:"5vh"
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({
+    height:"100vh", 
+    width:"100vw", 
+    display:"flex", 
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
 }));
 
 
@@ -65,7 +66,7 @@ export default function ComoFunciona() {
         <StyledBox>
         <StyledCard>
         <TitleTypography>¿Cómo reservar?</TitleTypography>
-            <Timeline style={{display:"flex", justify:"center"}}position="alternate" >
+            <Timeline style={{height:"70vh", display:"flex", justify:"center", paddingBottom:"5vh"}}position="alternate" >
                 <TimelineItem>
                     <TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">
                         Paso 1
