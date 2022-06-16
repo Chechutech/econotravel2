@@ -14,6 +14,7 @@ import { Login } from './componentes/Login/Login';
 import Registro from './componentes/registro/Registro'
 import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
+import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
 import ExpDestacadas from './componentes/Home/ExpDestacadas';
 function App() {
