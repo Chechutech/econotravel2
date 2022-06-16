@@ -70,3 +70,4 @@ function Catalogo({ data }) {
       )
   }
   export default Catalogo
+  

@@ -52,7 +52,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
           </StyledListItem>
   
           <StyledListItem  sx={{  marginRight:'1rem'}}>
-             <Link to='/QuienesSomos' style={{textDecoration:'none'}} > <StyledLink  variant="body1" >¿Quienes somos?</StyledLink></Link>
+             <Link to='/QuienesSomos' style={{textDecoration:'none'}} > <StyledLink  variant="body1" >¿Quiénes somos?</StyledLink></Link>
           </StyledListItem>
   
           <StyledListItem sx={{  marginRight:'1rem'}}>

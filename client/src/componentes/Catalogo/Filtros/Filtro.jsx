@@ -11,11 +11,10 @@ function Filtro() {
 
   return (
     <>
-     
-        <Box style={{marginTop:'10rem', display:'flex', justifyContent:'center'}}>
-      <DropdownUbicacion />
-      <DropdownTransporte />
-      <DropdownDuracion/> 
+      <Box style={{marginTop:'10rem', display:'flex', justifyContent:'center'}}>
+        <DropdownUbicacion />
+        <DropdownTransporte />
+        <DropdownDuracion/> 
       </Box>
   
     </>

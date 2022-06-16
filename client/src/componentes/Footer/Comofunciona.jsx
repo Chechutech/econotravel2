@@ -13,47 +13,86 @@ import CardTravelIcon from '@mui/icons-material/CardTravel';
 import PaymentIcon from '@mui/icons-material/Payment';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { styled, Card } from '@mui/material';
+import {Box} from  '@mui/material';
 import {Link} from 'react-router-dom'
 
 
-const styledDot = styled(TimelineDot)(({ theme }) => ({
-    color: "#4b7f55"
+const StyledDot = styled(TimelineDot)(({ theme }) => ({
+    color: "#DE541E"
 }));
 
+const TitleTypography = styled(Typography)(({ theme }) => ({
+    backgroundColor:"#DE541E",
+    color: "#FFFAFA",
+    fontSize: 24,
+    textAlign: "center",
+    padding: "1vh"
+}));
+
+const SubTypography = styled(Typography)(({ theme }) => ({
+    color: "#DE541E",
+    fontSize: 18,
+}));
+
+const Parrafo = styled(Typography)(({ theme }) => ({
+    fontSize: 12,
+    align: "justify",
+}));
+
+const StyledCard = styled(Card)(({ theme }) => ({
+    marginTop:"27vh",
+    height:"80vh",
+    display:"flex",
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
+    backgroundColor: "#FFFAFA",
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({
+    height:"100vh", 
+    width:"100vw", 
+    display:"flex", 
+    flexDirection:"column",
+    justify:"center",
+    alignItem:"center",
+}));
 
 
 export default function ComoFunciona() {
     return (
-        <Card sx={{ height: 600, maxWidth: 1200 }}>
-            <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center" color="#4B7F55">¿Cómo reservar?</Typography>
-            <Timeline position="alternate" >
+        <StyledBox>
+        <StyledCard>
+        <TitleTypography>¿Cómo reservar?</TitleTypography>
+            <Timeline style={{height:"50vh", display:"flex", justify:"center"}}position="alternate" >
                 <TimelineItem>
                     <TimelineOppositeContent sx={{ m: 'auto 0' }} align="right" variant="body2" color="text.secondary">
                         Paso 1
                     </TimelineOppositeContent>
                     <TimelineSeparator>
-                        <TimelineDot color="secondary" variant="outlined">
+                        <StyledDot variant="outlined">
                             <PersonIcon />
-                        </TimelineDot>
+                        </StyledDot>
                         <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Typography variant="h6" component="span">Regístrate</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify">Si ya tienes una cuenta, <Link to='/IniciaSesion' style={{textDecoration:'none'}}>Inicia Sesión</Link></Typography>
+                        <SubTypography variant="h6" component="span">Regístrate</SubTypography>
+                        <Parrafo> Regístrate <Link to='/registro' style={{textDecoration:'none'}}>aquí.</Link></Parrafo>
+                        <Parrafo>Si ya tienes una cuenta, <Link to='/IniciaSesion' style={{textDecoration:'none'}}>Inicia Sesión aqui</Link></Parrafo>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
                     <TimelineOppositeContent sx={{ m: 'auto 0' }} variant="body2" color="text.secondary"> Paso 2 </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
-                        <TimelineDot color="secondary" variant="outlined">
+                        <StyledDot variant="outlined">
                             <CardTravelIcon />
-                        </TimelineDot>
+                        </StyledDot>
                         <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Typography variant="h6" component="span">Encuentra tu experiencia</Typography>
-                        <Typography variant="body2" color="text.secondary">Revisa nuestro catálogo</Typography>
+                        <SubTypography variant="h6" component="span">Encuentra tu experiencia</SubTypography>
+                        <Parrafo>Revisa nuestro <Link to='/cartas' style={{textDecoration:'none'}}>Catálogo</Link></Parrafo>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -62,16 +101,16 @@ export default function ComoFunciona() {
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                         <TimelineConnector />
-                        <TimelineDot color="secondary" variant="outlined">
+                        <StyledDot variant="outlined">
                             <LaptopMacIcon />
-                        </TimelineDot >
-                        <TimelineConnector sx={{ bgcolor: 'primary.main' }} />
+                        </StyledDot >
+                        <TimelineConnector/>
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Typography variant="h6" component="span">
+                        <SubTypography variant="h6" component="span">
                             Confirma tus datos
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify">Selecciona la fecha y el número de personas</Typography>
+                        </SubTypography>
+                        <Parrafo>Selecciona la fecha y el número de personas</Parrafo>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
@@ -79,35 +118,34 @@ export default function ComoFunciona() {
                         Paso 4
                     </TimelineOppositeContent>
                     <TimelineSeparator>
-                        <TimelineConnector sx={{ bgcolor: 'primary.main' }} />
-                        <TimelineDot color="secondary">
+                        <TimelineConnector/>
+                        <StyledDot variant="outlined">
                             <PaymentIcon />
-                        </TimelineDot>
-                        <TimelineConnector />
+                        </StyledDot>
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Typography variant="h6" component="span">
+                        <SubTypography variant="h6" component="span">
                             Elige tu método de pago
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">Transferencia bancaria, Paypal o tarjeta de crédito</Typography>
+                        </SubTypography>
+                        <Parrafo>Para más información, haz click <Link to='/PagoSeguro' style={{textDecoration:'none'}}>aquí</Link></Parrafo>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
                     <TimelineOppositeContent sx={{ m: 'auto 0' }} variant="body2" color="text.secondary"> Paso 5 </TimelineOppositeContent>
-                    <TimelineSeparator>
-                        <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-                        <TimelineDot color="secondary">
+                    <TimelineSeparator>                 
+                    <TimelineConnector/>
+                        <StyledDot variant="outlined">
                             <CheckCircleIcon />
-                        </TimelineDot>
-                        <TimelineConnector />
+                        </StyledDot>
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
-                        <Typography variant="h6" component="span">Reserva confirmada</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify"> Tras recibir el pago se confirma la reserva.</Typography>
-                        <Typography variant="body2" color="text.secondary" align="justify"> Revisa tu e-mail!</Typography>
+                        <SubTypography>Reserva confirmada</SubTypography>
+                        <Parrafo> Tras recibir el pago se confirma la reserva.</Parrafo>
+                        <Parrafo> Revisa tu e-mail!</Parrafo>
                     </TimelineContent>
                 </TimelineItem>
             </Timeline>
-        </Card>
+        </StyledCard>
+        </StyledBox>
     );
 }
