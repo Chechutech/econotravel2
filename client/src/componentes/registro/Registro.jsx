@@ -13,6 +13,9 @@ import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import logo1 from '../../componentes/imagenes/logo1.png'
+
+
+
 const handleSubmit = (event) => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
@@ -116,7 +119,7 @@ const Registro = () => {
             <Grid container>
               <Grid item xs sx={{ display: "flex", alignItems: "center" }}>
                 <Link href="#" variant="body2" style={{ color: "#4b7f55" }}>
-                  Forgot password?
+                  Haz clic aqui si ya te has registrado
                 </Link>
               </Grid>
             </Grid>

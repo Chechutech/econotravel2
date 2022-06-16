@@ -16,7 +16,7 @@ import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/Catalogo
 import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
 import ExpDestacadas from './componentes/Home/ExpDestacadas';
 import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
-import ExpDestacadas from './componentes/Home/ExpDestacadas';
+
 function App() {
   
   const [data, setData] = useState([])
@@ -60,7 +60,7 @@ function App() {
      
     <BrowserRouter>
     <div className="App">
-        <NavBar searcher={searchers} />
+          <NavBar searcher={searchers} />
         {/* <CatalogoS/> */}
 
       {/* <Home/>         */}
