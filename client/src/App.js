@@ -11,10 +11,7 @@ import Catalogo from './componentes/Catalogo/Catalogo';
 import Home from './componentes/Home/Home';
 import Filtro from './componentes/Catalogo/Filtros/Filtro';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
-<<<<<<< HEAD
 import ExpDestacadas from './componentes/Home/ExpDestacadas';
-=======
->>>>>>> 54596cd36c52b67c099026f21470d258f73b998f
 import { Login } from './componentes/Login/Login';
 import DropdownUbicacion from './componentes/Catalogo/Filtros/Ubicacion/DropdownUbicacion';
 import DropdownTransporte from './componentes/Catalogo/Filtros/Transporte/DropdownTransporte';
