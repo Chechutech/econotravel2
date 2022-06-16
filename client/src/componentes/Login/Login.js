@@ -1,105 +1,105 @@
-import React from "react";
-import {Routes, Route} from "react-router-dom";
-import {Box, Typography,Grid, styled, Paper, FormControlLabel,Checkbox, Button, TextField} from '@mui/material'
+import React from "react";import { styled } from '@mui/material/styles'
+import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox,  Grid, Box, Typography, Container } from "@mui/material";
+import LockOpenRoundedIcon from '@mui/icons-material/LockOpenRounded';
+import logo1 from '../../componentes/imagenes/logo1.png'
+import {Link} from 'react-router-dom'
 
 
-
-
-const BoxContacto= styled(Box)(({theme}) => ({
-    display: 'flex',
-    flexDirection:'column',
-    flexWrap: 'wrap',
-    justifyContent: 'space-evenly',
-    alignItems:'center',
-    backgroundColor: '#DE541E',
-    color:'#FFFAFA',
-    width: '60vw',
-    height: '60vh',
-    borderRadius: '10px',
-    boxShadow: '0 5px 5px rgba(0, 0, 0, 0.2)',
-    marginTop: '5rem',
+const handleSubmit = (event) => {
+};
+const StyledBox = styled(Box)(({ theme }) => ({
+  backgroundColor: "#FFFAFA",
+  [theme.breakpoints.down('sm')]: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
    
-    
-  }));
-  const StyledPaper= styled(Paper)(({ theme }) => ({
-    [theme.breakpoints.down('sm')]: {
-        height:'36vh',
-        backgroundColor: '#FFFAFA',
-        width: '58vw',
-        display: "flex",
-        flexDirection: 'column',
-        padding: '2rem',
-        borderRadius: '1rem',
-        justifyContent: 'space-between'
-        },
-        
-        [theme.breakpoints.up('sm')]: {
-            height:'42vh',
-            backgroundColor: '#FFFAFA',
-            width: '30vw',
-            display: "flex",
-            flexDirection: 'column',
-            padding: '2rem',
-            borderRadius: '1rem',
-            justifyContent: 'space-between'
-         },
-         [theme.breakpoints.up('xl')]: {
-            height:'36vh',
-            backgroundColor: '#FFFAFA',
-            width: '28vw',
-            display: "flex",
-            flexDirection: 'column',
-            padding: '2rem',
-            borderRadius: '1rem',
-            justifyContent: 'space-between'
-         }
+  },
+}))
 
-}));
-
-const ColorButton = styled(Button)(({ theme }) => ({
-    backgroundColor: '#DE541E',
-    '&:hover': {
-      backgroundColor: '#D4EAC8',
-      color:'black',
-
-    },
-    '&:focus': {
-        backgroundColor: '#4B7F55',
-
-      },
-    textTransform: 'none',
-    height: '2.4rem'
-  }));
-
-  const StyledTextField = styled(TextField)({
-        height: '0.4rem',
-  
-    });
-
-export const Login = () => {
-    return (
-        <Box style={{height:'100vh', display:'flex',  width: '100vw',justifyContent:'center', alignItems:'center' }}>
-        <BoxContacto >
-        <Grid> 
-           <StyledPaper elevation= {0} >
-           <Box>
-                    <StyledTextField 
-           id="standard-basic" label="Username" variant="standard"
-           size="small" fullWidth />
-                </Box>
-                <Box>
-                    <StyledTextField 
-           id="standard-basic" label="Password" variant="standard"
-           size="small" fullWidth />
-                </Box>
-
-               
-                <ColorButton variant="contained">Login</ColorButton>
-                <Typography variant="body1" color="initial"> Haz click aquí si todavia no te has registrado</Typography>
-           </StyledPaper>
-        </Grid>
-        </BoxContacto>
+const Login = () => {
+  return (
+    <>
+      <StyledBox  sx={{ display:"flex", justifycontent:"flex-start"}}>
+        <Box sx={{ marginRight: "auto" }}>
+          <Link to="/">
+            <img src={logo1} alt="logo" sx={{ width: 100, height: 100 }} />
+          </Link>
         </Box>
-    )
-        ;
-}
+      
+      <Container component="main" maxWidth="xs"  sx={{marginRight:"auto"}}>
+        <CssBaseline />
+        <Box
+             sx={{
+             marginTop: 8,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Avatar sx={{ m: 1 }} style={{ color: "#4b7f55" }}>
+            <LockOpenRoundedIcon/>
+          </Avatar>
+          <Typography component="h1" variant="h5">Log in
+           
+          </Typography>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
+            <TextField
+              style={{ color: "#4b7f55" }}
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+              color="success"
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+              color="success"
+            />
+
+            <FormControlLabel
+              control={
+                <Checkbox value="remember" style={{ color: "#4b7f55" }} />
+              }
+              label="Remember me"
+            />
+            <Button
+              style={{ backgroundColor: "#4b7f55" }}
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Log in
+            </Button>
+            <Grid container>
+              <Grid item xs sx={{ display: "flex", alignItems: "center" }}>
+                <Link to='/registro' href="#" variant="body2" style={{ color: "#4b7f55" }}>
+                  Haz clic aqui si todavia no te has registrado
+                </Link>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+              </Container>
+              </StyledBox>
+    </>
+  );
+};
+export default Login;

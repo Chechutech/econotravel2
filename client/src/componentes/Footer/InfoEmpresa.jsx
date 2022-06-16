@@ -2,6 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Button, Card, CardActionArea, CardContent, CardActions, Typography, CardMedia, Grid, Paper } from '@mui/material';
 import ImagenChica from '../imagenes/woman-g3c4e3a00a_1920.jpg';
+import {Outlet} from 'react-router-dom'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -49,6 +50,7 @@ function InfoEmpresa() {
                 </Grid>
 
             </Grid>
+            <Outlet/>
         </Box>
     );
 }

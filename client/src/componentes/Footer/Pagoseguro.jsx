@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Box, Button, Card, CardActionArea, CardContent, CardActions, Typography, CardMedia, Grid, Paper } from '@mui/material';
-
+import {Outlet} from 'react-router-dom'
 
 function PagoSeguro() {
     return (
+        <>
         <Box sx={{ flexGrow: 1, margin: '8rem' }}>
             <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center">Pago Seguro</Typography>
             <Typography variant="body2" color="text.secondary" align="justify" padding="3vh">
@@ -51,6 +52,8 @@ function PagoSeguro() {
 
             </Grid>
         </Box>
+        <Outlet/>
+        </>
     );
 }
 export default PagoSeguro;

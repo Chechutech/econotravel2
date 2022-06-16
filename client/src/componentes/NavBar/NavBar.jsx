@@ -118,7 +118,7 @@ function NavBar({searcher}) {
                
             </Search>
             <Stack direction="row" spacing={2} sx={{ display: 'flex', alignItems:'center' }}>
-                <StyledIcon2 />
+              <Link to="/login">  <StyledIcon2 /></Link>
                 <StyledIcon sx={{ }}/>
               </Stack>
             

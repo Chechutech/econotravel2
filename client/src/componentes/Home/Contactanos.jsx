@@ -1,6 +1,6 @@
 import {Box, styled, Typography, Button} from '@mui/material';
 import ContactanosImg from '../imagenes/ContactanosImg.jpg'
-
+import { Link } from 'react-router-dom'
 
 const BoxStyled = styled(Box)(({ theme }) => ({
     backgroundColor: '#DE541E',
@@ -65,7 +65,7 @@ const Contactanos = () => {
             <BoxTexto style={{ textAlign: 'center'}}>
             <Typography style={{fontSize:'2rem', paddingBottom:'2rem'}}variant="h2" >Travel any corner of the world with us</Typography>
             <Typography style={{paddingBottom:'2rem'}} variant="body1" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quos aliquid magni, repudiandae error eligendi repellat id doloremque voluptate, in quo asperiores impedit neque dolore temporibus possimus, assumenda doloribus modi?</Typography>
-            <StyledButton>Contáctanos</StyledButton>
+           <Link to='/Contacto' style={{textDecoration: "none"}}> <StyledButton>Contáctanos</StyledButton></Link>
             </BoxTexto>
         </BoxStyled>
         

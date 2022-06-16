@@ -1,19 +1,9 @@
 import React from "react";
 import { styled } from '@mui/material/styles'
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Grid, Box, Typography, Container } from "@mui/material";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import logo1 from '../../componentes/imagenes/logo1.png'
-
+import {Link} from 'react-router-dom'
 
 
 const handleSubmit = (event) => {
@@ -118,7 +108,7 @@ const Registro = () => {
             </Button>
             <Grid container>
               <Grid item xs sx={{ display: "flex", alignItems: "center" }}>
-                <Link href="#" variant="body2" style={{ color: "#4b7f55" }}>
+                <Link to='/login' href="#" variant="body2" style={{ color: "#4b7f55" }}>
                   Haz clic aqui si ya te has registrado
                 </Link>
               </Grid>

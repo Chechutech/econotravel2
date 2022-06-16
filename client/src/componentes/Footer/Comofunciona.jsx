@@ -13,7 +13,7 @@ import CardTravelIcon from '@mui/icons-material/CardTravel';
 import PaymentIcon from '@mui/icons-material/Payment';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { styled, Card } from '@mui/material';
-import {Link} from 'react-router-dom'
+import {Link, Outlet} from 'react-router-dom'
 
 
 const styledDot = styled(TimelineDot)(({ theme }) => ({
@@ -24,6 +24,7 @@ const styledDot = styled(TimelineDot)(({ theme }) => ({
 
 export default function ComoFunciona() {
     return (
+        <>
         <Card sx={{ height: 600, maxWidth: 1200 }}>
             <Typography gutterBottom variant="h5" component="div" padding="5vh" align="center" color="#4B7F55">¿Cómo reservar?</Typography>
             <Timeline position="alternate" >
@@ -108,6 +109,8 @@ export default function ComoFunciona() {
                     </TimelineContent>
                 </TimelineItem>
             </Timeline>
-        </Card>
+            </Card>
+            <Outlet/>
+            </>  
     );
 }

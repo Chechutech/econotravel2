@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import {Link} from 'react-router-dom'
+import {Link, Outlet} from 'react-router-dom'
 import data from '../experiencias.json'
 import {Grid,Container, Box, Paper, styled,Card, CardMedia,CardContent, Stack, Item,Button, Typography, CardActions} from '@mui/material'
 import Filtro from "../Catalogo/Filtros/Filtro.jsx";
@@ -85,8 +85,10 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
                 </Grid>
                 ))}
            </Grid>
-           </StyledContainer>
-    </> );
+        </StyledContainer>
+        <Outlet/>
+      </>
+    );
 }
  
 export default ExpDestacadas;

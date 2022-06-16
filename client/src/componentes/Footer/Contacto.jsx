@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route} from "react-router-dom";
 import {Box, Typography, styled} from '@mui/material'
-
+import {Outlet} from 'react-router-dom'
 
 
 
@@ -38,6 +38,7 @@ const BoxContacto= styled(Box)(({theme}) => ({
 
 const Contact = () => {
     return (
+        <>
         <Box style={{height:'100vh', display:'flex',  width: '100vw',justifyContent:'center', alignItems:'center' }}>
         <BoxContacto className='contact-page'>
         <Box>
@@ -66,8 +67,11 @@ const Contact = () => {
             </Box>
 
            
-        </BoxContacto>
-        </Box>
+            </BoxContacto>
+            
+            </Box>
+            <Outlet/>
+            </>
     )
         ;
 }
