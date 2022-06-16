@@ -7,6 +7,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   textAlign: 'center',
   display: 'flex',
   justifyContent: 'center',
+  borderRadius: '10%',
 
   [theme.breakpoints.down('sm')]: {
     color: '#FFFAFA',

@@ -84,7 +84,7 @@ function App() {
         {/* <CatalogoS/> */}
 
       {/* <Home/>         */}
-      <Login/>
+      {/* <Login/> */}
          <Routes>    
             <Route index element={<Home />} />
             <Route path='/cartas/:id' element={<DetalleExperiencias/>} /> 
