@@ -1,8 +1,9 @@
-import React from "react";import { styled } from '@mui/material/styles'
+import React from "react";
+import { styled } from '@mui/material/styles'
 import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox,  Grid, Box, Typography, Container } from "@mui/material";
 import LockOpenRoundedIcon from '@mui/icons-material/LockOpenRounded';
 import logo1 from '../../componentes/imagenes/logo1.png'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 const handleSubmit = (event) => {
