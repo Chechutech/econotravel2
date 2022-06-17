@@ -80,7 +80,7 @@ export default function ComoFunciona() {
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <SubTypography variant="h6" component="span">Regístrate</SubTypography>
                         <Parrafo> Regístrate <Link to='/registro' style={{textDecoration:'none'}}>aquí.</Link></Parrafo>
-                        <Parrafo>Si ya tienes una cuenta, <Link to='/IniciaSesion' style={{textDecoration:'none'}}>Inicia Sesión aqui</Link></Parrafo>
+                        <Parrafo>Si ya tienes una cuenta, <Link to='/login' style={{textDecoration:'none'}}>Inicia Sesión aqui</Link></Parrafo>
                     </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
