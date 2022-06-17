@@ -27,7 +27,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
 const Registro = () => {
   return (
     <>
-      <StyledBox  sx={{ display:"flex", justifycontent:"flex-start"}}>
+      <StyledBox  sx={{ display:"flex", justifycontent:"flex-start", margin: '8rem'}}>
         <Box sx={{ marginRight: "auto" }}>
           <Link to="/">
             <img src={logo1} alt="logo" sx={{ width: 100, height: 100 }} />
