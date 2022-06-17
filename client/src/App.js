@@ -80,7 +80,7 @@ function App() {
             </Route>
             <Route path="/registro" element={<Registro />} />
             <Route path="/login" element={<Login />} />
-            <Route path='/reserva' element={<Reserva />}/>
+            <Route path="/reserva/:id" element={<Reserva />}/>
           </Routes>
 
           {/* <DropdownUbicacion filterer={filterer}/>

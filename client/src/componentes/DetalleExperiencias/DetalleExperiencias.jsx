@@ -138,7 +138,7 @@ const DetalleExperiencias = () => {
                           </Typography>
                           <DesplegableCantidad />
                       </Box>
-                      <Link to='/reserva' style={{textDecoration:'none'}} ><StyledButton variant="text" color="primary">
+                      <Link to={`/reserva/${exp.id}`} style={{textDecoration:'none'}} ><StyledButton variant="text" color="primary">
                           Reservar
                       </StyledButton></Link>
                   </Box>

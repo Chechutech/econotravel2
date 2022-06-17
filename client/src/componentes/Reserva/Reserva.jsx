@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { styled } from '@mui/material/styles'
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -14,7 +14,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import logo1 from '../../componentes/imagenes/logo1.png';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
-
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 
 
@@ -52,9 +53,31 @@ const StyledButton = styled(Button)(({ theme }) => ({
   }));
 
 const Reserva = () => {
+  const {id} = useParams();
+
+  const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
+    
+    useEffect(() => {
+      setLoading(true)
+      axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
+        .then(res => {
+          console.log(res.data)
+          setData(res.data);
+          setLoading(false)
+        })
+    }, [])
+      
+    console.log(data)
+    const test = data.filter(exper => exper.id == id);
+    console.log(test)
+       
+       if (loading) return <section>Cargando...</section>
   return (
     <>
-      <StyledBox  >
+        {test.map((exp, index) => (
+      <StyledBox  key={index}>
+
         <Box sx={{ marginRight: "auto" , display:'flex'}}>
           <Link to="/">
             <img src={logo1} alt="logo" sx={{ width: 100, height: 100 }} />
@@ -164,7 +187,7 @@ const Reserva = () => {
               <Box sx={{ border: 2, fontWeight: 'bold', marginRight:'12rem',  marginBottom:'12rem' }} style={{paddingLeft:'1rem',paddingRight:'1rem', textAlign:'center', borderColor:'#4b7f55',height: '80vh', width:'28rem',  marginLeft:'2rem', color:'#4b7f55', display:'flex', flexDirection:'column', justifyContent:'space-evenly', alignItems:'center' }}>
             <Typography  sx={{ fontWeight: 'bold', fontSize:'1.4rem',  marginTop:'1rem' }} variant="body1" >250€ </Typography>
             <Typography  sx={{ fontWeight: 'bold', fontSize:'1rem',  marginTop:'1rem' }} variant="body1" >Experiencia reservada: </Typography>
-            <Typography  sx={{ fontWeight: 'bold', fontSize:'1rem',  marginTop:'1rem' }} variant="body1" >Paseo en bicicleta por el Montseny </Typography>
+            <Typography  sx={{ fontWeight: 'bold', fontSize:'1rem',  marginTop:'1rem' }} variant="body1" > {exp.titulo}</Typography>
 
 
 
@@ -191,6 +214,7 @@ const Reserva = () => {
         </Box>
               </Box>
               </StyledBox>
+        ))}
     </>
   );
 };

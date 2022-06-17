@@ -56,7 +56,7 @@ function Catalogo({ data }) {
                   {exp.precio}€ Por persona
                     </Typography>
                   </Typography>
-               <Link to='/reserva' style={{textDecoration: "none"}}> <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button></Link>
+               <Link to={`/reserva/${exp.id}`} style={{textDecoration: "none"}}> <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button></Link>
                    </CardActions>
                   </CardContent>
                  
