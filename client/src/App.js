@@ -19,6 +19,7 @@ import ComoFunciona from './componentes/Footer/ComoFunciona';
 import InfoEmpresa from './componentes/Footer/InfoEmpresa';
 import PagoSeguro from './componentes/Footer/PagoSeguro';
 import Contact from './componentes/Footer/Contacto';
+import Reserva from './componentes/Reserva/Reserva'
 
 
 
@@ -70,6 +71,8 @@ function App() {
           </Routes>
           <Routes>
               <Route path='/registro' element={<Registro />}/>
+              <Route path='/reserva' element={<Reserva />}/>
+
           </Routes>
         
       <Footer/>  

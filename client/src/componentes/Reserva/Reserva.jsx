@@ -62,8 +62,8 @@ const Reserva = () => {
             <Typography variant='h1' style={{marginTop:'10rem', color:"#4b7f55", fontWeight:'bold', fontSize:'2.8rem'}} >Formulario de reserva</Typography>
           
         </Box>
-      <Box sx={{ width:'100vw', display:'flex', justifyContent:"center", alignItems:'center' }}>
-      <Container component="main"   sx={{marginRight:"auto"}}>
+      <Box sx={{ width:'100vw', display:'flex', justifyContent:"center", }}>
+      <Container component="main" style={{marginTop:'4rem'}} >
         <CssBaseline />
         <Box
              sx={{
@@ -86,7 +86,7 @@ const Reserva = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Nombre"
               name="email"
               autoComplete="email"
               autoFocus
@@ -99,7 +99,7 @@ const Reserva = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Apellidos"
               name="email"
               autoComplete="email"
               autoFocus
@@ -112,7 +112,7 @@ const Reserva = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Dirección"
               name="email"
               autoComplete="email"
               autoFocus
@@ -125,7 +125,7 @@ const Reserva = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Nombre"
               name="email"
               autoComplete="email"
               autoFocus
@@ -137,7 +137,7 @@ const Reserva = () => {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Apellidos"
               name="email"
               autoComplete="email"
               autoFocus
@@ -147,6 +147,8 @@ const Reserva = () => {
             <TextField
         type="date"
         margin="normal"
+        label="Start date"
+
         defaultValue="2019-05-24"
         inputProps={{ min: "2019-01-24", max: "2020-05-31" }}
       />
@@ -159,7 +161,7 @@ const Reserva = () => {
           </Box>
         </Box>
               </Container>
-              <Box sx={{ border: 2, fontWeight: 'bold', marginRight:'12rem' }} style={{paddingLeft:'1rem',paddingRight:'1rem', textAlign:'center', borderColor:'#4b7f55',height: '80vh', width:'28rem',  marginLeft:'2rem', color:'#4b7f55', display:'flex', flexDirection:'column', justifyContent:'space-evenly', alignItems:'center' }}>
+              <Box sx={{ border: 2, fontWeight: 'bold', marginRight:'12rem',  marginBottom:'12rem' }} style={{paddingLeft:'1rem',paddingRight:'1rem', textAlign:'center', borderColor:'#4b7f55',height: '80vh', width:'28rem',  marginLeft:'2rem', color:'#4b7f55', display:'flex', flexDirection:'column', justifyContent:'space-evenly', alignItems:'center' }}>
             <Typography  sx={{ fontWeight: 'bold', fontSize:'1.4rem',  marginTop:'1rem' }} variant="body1" >250€ </Typography>
             <Typography  sx={{ fontWeight: 'bold', fontSize:'1rem',  marginTop:'1rem' }} variant="body1" >Experiencia reservada: </Typography>
             <Typography  sx={{ fontWeight: 'bold', fontSize:'1rem',  marginTop:'1rem' }} variant="body1" >Paseo en bicicleta por el Montseny </Typography>
@@ -180,7 +182,7 @@ const Reserva = () => {
           </Box>
           <Box style={{display:'flex'}} >
           <CheckBoxIcon/>
-          <Typography variant="body1" style={{fontSize:'0.8rem'}}>Colaaboradores de Calidad</Typography>
+          <Typography variant="body1" style={{fontSize:'0.8rem'}}>Colaboradores de Calidad</Typography>
           </Box>
           <Box style={{display:'flex'}} >
           <CheckBoxIcon/>
