@@ -11,7 +11,7 @@ function handleClick(event) {
   console.info('You clicked a breadcrumb.');
 }
 
-export default function Breadcrums({i}) {
+export default function Breadcrums({i, i2, i3}) {
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/" onClick={handleClick}>
       Inicio
@@ -23,7 +23,7 @@ export default function Breadcrums({i}) {
       href="/material-ui/getting-started/installation/"
       onClick={handleClick}
     >
-      patata
+      {i}
     </Link>,
    <Link
    underline="hover"
@@ -32,7 +32,7 @@ export default function Breadcrums({i}) {
    href="/material-ui/getting-started/installation/"
    onClick={handleClick}
  >
-  patata
+  {i2}
  </Link>,
  <Link
  underline="hover"
@@ -41,7 +41,7 @@ export default function Breadcrums({i}) {
  href="/material-ui/getting-started/installation/"
  onClick={handleClick}
 >
-  patata
+  {i3}
 </Link>,
   ];
 
