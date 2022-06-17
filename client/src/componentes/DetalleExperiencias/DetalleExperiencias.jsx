@@ -6,6 +6,8 @@ import Breadcrums from "./Breadcrums";
 import ReadMore from "./ReadMore";
 import { useParams } from "react-router-dom";
 import DesplegableCantidad from './DesplegableCantidad';
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -136,9 +138,9 @@ const DetalleExperiencias = () => {
                           </Typography>
                           <DesplegableCantidad />
                       </Box>
-                      <StyledButton variant="text" color="primary">
+                      <Link to='/reserva' style={{textDecoration:'none'}} ><StyledButton variant="text" color="primary">
                           Reservar
-                      </StyledButton>
+                      </StyledButton></Link>
                   </Box>
               </ResponsiveBox>
           </Box>

@@ -3,8 +3,6 @@ import { Box, AppBar, Toolbar, InputBase, Stack, styled, alpha, } from '@mui/mat
 import { Link, Outlet } from 'react-router-dom'
 import logo4 from '../imagenes/logo4.png';
 import SearchIcon from '@mui/icons-material/Search';
-import gorila4 from '../imagenes/gorila4a.png';
-import cesta from '../imagenes/cesta.png';
 import CardTravelIcon from '@mui/icons-material/CardTravel';
 import PersonIcon from '@mui/icons-material/Person';
 

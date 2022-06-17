@@ -6,19 +6,22 @@ import NavBar from "./componentes/NavBar/NavBar";
 import theme from "./componentes/Styles/Theme";
 import DetalleExperiencias from "./componentes/DetalleExperiencias/DetalleExperiencias";
 import "@fontsource/roboto-mono";
-import { ThemeProvider } from "@mui/material";
-import Catalogo from "./componentes/Catalogo/Catalogo";
-import Home from "./componentes/Home/Home";
-import InfoEmpresa from "./componentes/Footer/InfoEmpresa";
-import Login from "./componentes/Login/Login";
-import Registro from "./componentes/registro/Registro";
-import CatalogoUbicacion from "./componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion";
-import CatalogoTransporte from "./componentes/Catalogo/Filtros/Transporte/CatalogoTransporte";
-import ExpDestacadas from "./componentes/Home/ExpDestacadas";
-import CatalogoDuracion from "./componentes/Catalogo/Filtros/Duracion/CatalogoDuracion";
-import ComoFunciona from "./componentes/Footer/Comofunciona";
-import PagoSeguro from "./componentes/Footer/Pagoseguro";
-import Contact from "./componentes/Footer/Contacto";
+import { ThemeProvider} from '@mui/material';
+import Catalogo from './componentes/Catalogo/Catalogo';
+import Home from './componentes/Home/Home';
+import Login from './componentes/Login/Login';
+import Registro from './componentes/registro/Registro'
+import CatalogoUbicacion from './componentes/Catalogo/Filtros/Ubicacion/CatalogoUbicacion';
+import CatalogoTransporte from './componentes/Catalogo/Filtros/Transporte/CatalogoTransporte';
+import ExpDestacadas from './componentes/Home/ExpDestacadas';
+import CatalogoDuracion from './componentes/Catalogo/Filtros/Duracion/CatalogoDuracion';
+import ComoFunciona from './componentes/Footer/ComoFunciona';
+import InfoEmpresa from './componentes/Footer/InfoEmpresa';
+import PagoSeguro from './componentes/Footer/PagoSeguro';
+import Contact from './componentes/Footer/Contacto';
+import Reserva from './componentes/Reserva/Reserva'
+
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -77,6 +80,7 @@ function App() {
             </Route>
             <Route path="/registro" element={<Registro />} />
             <Route path="/login" element={<Login />} />
+            <Route path='/reserva' element={<Reserva />}/>
           </Routes>
 
           {/* <DropdownUbicacion filterer={filterer}/>
@@ -90,3 +94,4 @@ function App() {
   );
 }
 export default App;
+     
