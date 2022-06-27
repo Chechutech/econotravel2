@@ -70,7 +70,7 @@ function App() {
               <Route path="/ubicacion/:ubi" element={<CatalogoUbicacion />} />
               <Route
                 path="/transporte/:trans"
-                element={<CatalogoTransporte />}
+                  element={<CatalogoTransporte />}
               />
               <Route path="/duracion/:dur" element={<CatalogoDuracion />} />
               <Route path="/ComoFunciona" element={<ComoFunciona />} />
