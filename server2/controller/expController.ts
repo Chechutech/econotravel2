@@ -5,8 +5,7 @@ import getExperiencias  from "../models/ExperienciasDB";
 import { Request, Response} from "express";
 
 
-const expController = async (req: Request, 
-res:Response, ) => {
+const expController = async (req: Request, res:Response, ) => {
  try {
    const result = await getExperiencias();
    res.send(JSON.stringify({ "experiencias": 
