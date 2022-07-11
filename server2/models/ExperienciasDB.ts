@@ -4,7 +4,15 @@ import  pool from './database'
 export const getExperiencias = async () => {
   const queryExp = 'SELECT * FROM experiencias;'
   const result = await pool.query(queryExp);
-  return result.rows
+  return  result.rows
+};
+
+export const deleteExperiencias = async (id: number) => {
+  const queryExp = `
+  DELETE FROM experiencias WHERE id_experiencias = $1 returning *;`
+  const result = await pool.query(queryExp, [id]);
+  console.log(result.rows[0])
+  return result.rows[0]
 };
 
 export type Experiencia = {
@@ -18,7 +26,7 @@ export const updateExperiencias = async (id: number, experiencia: Experiencia) =
     UPDATE experiencias SET
       precio = $2,
       ubicacion = $3
-    WHERE id_experiencias = $1;`
+    WHERE id_experiencias = $1 returning *;`
   const result = await pool.query(queryExp, [id, precio, ubicacion]);
-  return result.rows
+  return result.rows[0]
 };
