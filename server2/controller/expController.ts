@@ -1,7 +1,4 @@
-
-
-import pool from "../models/database";
-import getExperiencias  from "../models/ExperienciasDB";
+import { getExperiencias }  from "../models/ExperienciasDB";
 import { Request, Response} from "express";
 
 
@@ -18,6 +15,7 @@ result } ))
     });
   }
    };
+
 
 export default expController;
 

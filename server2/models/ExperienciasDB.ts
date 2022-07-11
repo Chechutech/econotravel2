@@ -1,10 +1,21 @@
 import  pool from './database'
 
 
-const getExperiencias = async () => {
+
+export const getExperiencias = async () => {
   const queryExp = 'SELECT * FROM experiencias;'
   const result = await pool.query(queryExp);
-  return result.rows
+  return  result.rows
 };
 
-export default  getExperiencias ;
+
+
+
+export const deleteExperiencias = async (id: number) => {
+  const queryExp = `
+  DELETE FROM experiencias WHERE id_experiencias = $1 returning *;`
+  const result = await pool.query(queryExp, [id]);
+  console.log(result.rows[0])
+  return result.rows[0]
+};
+
