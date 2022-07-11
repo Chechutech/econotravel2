@@ -1,14 +1,13 @@
 import expController from "../controller/expController";
 import  Router  from "express";
 import updateController from "../controller/updateController";
-import addController from "../controller/addController";
-//import pool from "../models/database";
-
+import pool from "../models/database";
+import deleteController from "../controller/deleteController";
 const router = Router();
 
 
 router.get('/exp', expController);
-router.post('/exp', addController);
+router.delete('/exp/:id', deleteController);
 router.put('/exp/:id', updateController);
 
 export default router;
