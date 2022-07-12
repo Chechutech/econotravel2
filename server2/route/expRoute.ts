@@ -3,10 +3,13 @@ import  Router  from "express";
 import updateController from "../controller/updateController";
 import pool from "../models/database";
 import deleteController from "../controller/deleteController";
+import insertController from "../controller/insertController";
+
 const router = Router();
 
 
 router.get('/exp', expController);
+router.post('/exp', insertController)
 router.delete('/exp/:id', deleteController);
 router.put('/exp/:id', updateController);
 

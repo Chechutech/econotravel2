@@ -33,10 +33,3 @@ app.listen(port, () => {
 
 
 
-<<<<<<< HEAD
-app.listen(3000) 
-console.log('server listening on port 3000')
-
-
-=======
->>>>>>> bbbe33b0119b4b34dd9fdc84790b935b2fb8a9f3

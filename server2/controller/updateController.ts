@@ -1,13 +1,20 @@
-import {updateExperiencias}  from "../models/ExperienciasDB";
+import {Experiencia, updateExperiencias}  from "../models/ExperienciasDB";
 import { Request, Response} from "express";
 
 const updateController = async (req: Request, res:Response, ) => {
  try {
    const id = req.params.id
    const experiencia = {
-    precio: req.body.precio,
-    ubicacion: req.body.ubicacion
-   }
+    titulo: req.body.titulo,
+    descripcion: req.body.descripcion,
+    precio:req.body.precio ,
+    ubicacion: req.body.ubicacion,
+    transporte:req.body.transporte,
+    duracion:req.body.duracion,
+    accesibilidad:req.body.accesibilidad,
+    tiempo_duracion:req.body.tiempo_duracion,
+    img_url:req.body.img_url
+   } as Experiencia
    const result = await updateExperiencias (parseInt(id), experiencia);
    res.send(JSON.stringify({ "experiencias": 
 result } ))
