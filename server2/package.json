@@ -2,10 +2,12 @@
   "name": "server2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/server.js",
   "scripts": {
-    "start": "ts-node server.ts",
-    "test": "jest"
+    "start": "node .",
+    "start:dev" : "ts-node server.ts",
+    "test": "jest",
+    "build" : "tsc --build"
   },
   "keywords": [],
   "author": "",
