@@ -5,7 +5,7 @@ import bcrypt from 'bcrypt';
 
 
 
-export const loginController = async (req: Request, res: Response) => {
+/*export const loginController = async (req: Request, res: Response) => {
   // obtener email del usuario del JSON del body (req.body.email)
   const usuario = {
     email: req.body.email,
@@ -43,4 +43,4 @@ export const loginController = async (req: Request, res: Response) => {
   // si encaja, le damos al usuario un JWT (token firmado) que dice
   // qué usuario es (por ejemplo, la id)
 
-};
+};*/
