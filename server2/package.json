@@ -5,7 +5,7 @@
   "main": "./build/server.js",
   "scripts": {
     "start": "node .",
-    "start:dev" : "ts-node server.ts",
+    "start:dev" : "ts-node ./src/server.ts",
     "test": "jest",
     "build" : "tsc --build"
   },
