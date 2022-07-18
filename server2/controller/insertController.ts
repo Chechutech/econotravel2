@@ -15,10 +15,10 @@ const insertController = async (req: Request, res:Response) => {
         tiempo_duracion:req.body.tiempo_duracion,
         img_url:req.body.img_url
       }
-      console.log(req.body)
+      //console.log(req.body)
          const result = await insertExperiencias (experiencia);
      
-   res.status(200).json({ message:`Tu experiencia ${result.id_experiencias} ha sido inserida con éxito.`})
+   res.status(200).json({ message:`Tu experiencia ${result.id_experiencias} ha sido insertada con éxito.`})
      
      } catch (err:any) {
        res.status(400).json({

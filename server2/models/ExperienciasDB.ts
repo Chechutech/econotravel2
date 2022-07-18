@@ -11,7 +11,7 @@ export const deleteExperiencias = async (id: number) => {
   const queryExp = `
   DELETE FROM experiencias WHERE id_experiencias = $1 returning *;`
   const result = await pool.query(queryExp, [id]);
-  console.log(result.rows[0])
+ // console.log(result.rows[0])
   return result.rows[0]
 };
 
@@ -30,7 +30,7 @@ export const insertExperiencias = async (experiencia:Experiencia) => {
     VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
     RETURNING *`
   const result = await pool.query(queryExp, [id_experiencias, titulo, descripcion, precio, ubicacion, transporte, duracion, accesibilidad, tiempo_duracion, img_url]);
-  console.log(result.rows[0])
+  //console.log(result.rows[0])
   return result.rows[0]
 };
 
