@@ -35,7 +35,7 @@ function CatalogoDuracion() {
   
   useEffect(() => {
     setLoading(true)
-    axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
+    axios.get( 'https://econotravelgrup4.herokuapp.com/experiencias')
       .then(res => {
         console.log(res.data)
         setData(res.data);

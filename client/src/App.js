@@ -31,10 +31,10 @@ function App() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://econotravel-grupo3.herokuapp.com/experiencias")
+      .get(process.env.REACT_APP_BACKEND_URL + "exp")
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
+        console.log("heroku",res.data);
+        setData(res.data.experiencias);
         setLoading(false);
       });
   }, []);
