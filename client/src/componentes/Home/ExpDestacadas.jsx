@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import {Link, Outlet} from 'react-router-dom'
-import data from '../experiencias.json'
 import {Grid,Container, Box, Paper, styled,Card, CardMedia,CardContent, Stack, Item,Button, Typography, CardActions} from '@mui/material'
 import Filtro from "../Catalogo/Filtros/Filtro.jsx";
 
@@ -29,10 +28,10 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
-    axios.get('https://econotravel-grupo3.herokuapp.com/experiencias')
+    axios.get(process.env.REACT_APP_BACKEND_URL + "exp")
       .then(res => {
         console.log(res.data)
-        setData(res.data);
+        setData(res.data.experiencias);
         setLoading(false)
       })
   }, [])
@@ -40,9 +39,9 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
 
 
 
-    const exp1= data.filter(exp=> exp.id == id)
-    const exp2= data.filter(exp=> exp.id == id2)
-    const exp3= data.filter(exp=> exp.id == id3)
+    const exp1= data.filter(exp=> exp.id_experiencias == id)
+    const exp2= data.filter(exp=> exp.id_experiencias == id2)
+    const exp3= data.filter(exp=> exp.id_experiencias == id3)
     const array = [...exp1, ...exp2, ...exp3]
   
     console.log(array)
@@ -63,7 +62,7 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
                               component="img"
                               height="370"
                               alt="bici montaña"
-                              image={exp.img} />
+                              image={exp.img_url} />
                    <CardContent>
                   <Link to={`/destacadas/${exp.titulo}`} style={{textDecoration: "none"}}> <Typography variant="body1" style={{fontWeight:"bold", color:"#4B7F55", height:'48px' }}>{exp.titulo}</Typography> </Link>
 
@@ -73,12 +72,12 @@ const ExpDestacadas = ({ id, id2, id3 }) => {
                     <Item2>Chip One2</Item2>
                   </Stack>
                 <CardActions style={{justifyContent:"space-between"}} >
-                  <Typography style={{fontSize:"0.8rem", color:"#4B7F55", fontWeight:"bold"}} >{exp.etiquetas[0].ubicacion}
+                  <Typography style={{fontSize:"0.8rem", color:"#4B7F55", fontWeight:"bold"}} >{exp.ubicacion}
                   <Typography style={{fontSize:"0.7rem", color:"#2F2F2F"}} >
                   {exp.precio}€ Por persona
                     </Typography>
                   </Typography>
-             <Link to={`/reserva/${exp.id}`} style={{textDecoration: "none"}}> <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button></Link>   
+             <Link to={`/reserva/${exp.id_experiencias}`} style={{textDecoration: "none"}}> <Button style={{fontSize:"0.6rem", color:"#2F2F2F", fontWeight:"bold"}}>Reserva ahora</Button></Link>   
                    </CardActions>
                   </CardContent>
                        </Card>

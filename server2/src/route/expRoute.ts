@@ -4,17 +4,18 @@ import updateController from "../controller/updateController";
 import deleteController from "../controller/deleteController";
 import insertController from "../controller/insertController";
 import { registerController, usuarios  } from "../controller/registerController";
-
+//import { loginController } from "../controller/loginController";
 
 
 const router = Router();
 
 
 router.get('/exp', expController);
-router.post('/exp', insertController)
+router.post('/exp', insertController);
 router.delete('/exp/:id', deleteController);
 router.put('/exp/:id', updateController);
 router.post('/user/register', registerController );
+router.post('/user/login',  );
 router.get('/user', usuarios);
 
 

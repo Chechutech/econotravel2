@@ -39,7 +39,6 @@ export const registerController = async (req: Request, res: Response,) => {
     //console.log(newUser)
     res.send(JSON.stringify({ "usuarios": 
  newUser } ))
-   
    } catch (err) {
      return res.status(400).json({
        error: err,

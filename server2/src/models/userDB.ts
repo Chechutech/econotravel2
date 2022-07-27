@@ -42,8 +42,8 @@ export const postUser = async (email:string, password:string ) => {
 }
 
 // login y register
-export const selectUser = async (usuario:User) => {
-  const { email, password} = usuario
+export const selectUser = async (email:string, password: string) => {
+  //const {email, password} = usuario
   const queryUser = `SELECT * FROM  usuarios WHERE email = $1`
  
   const result = await pool.query(queryUser, [email, password]);
