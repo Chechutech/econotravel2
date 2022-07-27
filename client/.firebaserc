@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "econotravel-e37d4"
-  }
+    "default": "econotravel2",
+    "econotravel2": "econotravel2"
+  },
+  "targets": {},
+  "etags": {}
 }
