@@ -31,9 +31,9 @@ function App() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(process.env.REACT_APP_BACKEND_URL + "exp")
+      .get( process.env.REACT_APP_BACKEND_URL + "exp")
       .then((res) => {
-        console.log("heroku",res.data);
+        console.log("heroku", res.data);
         setData(res.data.experiencias);
         setLoading(false);
       });
