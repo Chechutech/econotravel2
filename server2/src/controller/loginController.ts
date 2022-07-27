@@ -2,7 +2,7 @@
 import { postUser,getUser, selectUser} from "../models/userDB";
 import bcrypt from 'bcrypt';
 import { NextFunction } from "express";
-
+import jwt from 'jsonwebtoken';
 export const loginController = async (req:Request, res: Response, next: NextFunction)=>{
 
 
@@ -11,20 +11,24 @@ export const loginController = async (req:Request, res: Response, next: NextFunc
       const {email,password} =req.body;
 
       if(!email || !password){
-         throw new Error(' email or password not exist');
+        res.send ('password not valid');
+         //throw new Error('email or password not exist');
       }
 
       // llama a la bbdd recupera email y password
-      const result = await selectUser(email,password);
+      const result = await selectUser(email);
       // compara la password de la request con la password de la bbdd
       const comparePassword = await bcrypt.compare(password, result.password);
 
-      if(comparePassword){
+      if(comparePassword){res.json({
+        token: jwt.sign({id:result.id_usuario},process.env.JWT_SECRET!)})
+        
           // si todo va bien llama a next()
-          next();
+          //next();
       } else {
           // si va mal respuesta código 400 las passwords no coinciden
-          throw new Error('password not valid');
+          res.send ('password not valid');
+          //new Error('password not valid');
       }
 
 
