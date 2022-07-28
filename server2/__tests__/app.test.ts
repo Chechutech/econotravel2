@@ -28,22 +28,3 @@ describe ('POST /exp', () => {
     })
 })
 
-// describe('testing api',()=>{
-//     let response:Response;
-//     describe('GET "/exp"',()=>{
-//         beforeAll(async ()=>{
-//             response = await request(app)
-//             .get('/');
-//         })
-//         test('should return code 200',async ()=>{
-
-
-//         expect(response.status).toBe(200);
-//         expect(response.headers['content-type']).toContain('application/json')
-//     })
-//         test('should return "hello world"', async ()=>{
-//             expect(response.body).toBe('hello world')
-//         })
-// })
-// })
-

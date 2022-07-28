@@ -1,10 +1,11 @@
-/*import { Request, Response} from "express";
-import { postUser,getUser, selectUser} from "../models/userDB";
+import { Request, Response} from "express";
+import { selectUser} from "../models/userDB";
 import bcrypt from 'bcrypt';
 import { NextFunction } from "express";
 import jwt from 'jsonwebtoken';
-export const loginController = async (req:Request, res: Response, next: NextFunction)=>{
 
+
+export const loginController = async (req:Request, res: Response, next: NextFunction)=>{
 
   try {
       // obtiene email y password de la request.

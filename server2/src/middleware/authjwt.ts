@@ -1,19 +1,12 @@
 import jwt from 'jsonwebtoken';
-/*import dotenv from 'dotenv'; 
-
-dotenv.config();
-
-export const tokenGenerator (User) {
-    const payload = {
-        user:
-    }
-}*/
 import { Request, Response} from "express";
 import { NextFunction } from "express";
 
 
 export const authMiddleware = async (req:Request, res: Response, next: NextFunction)=>{
-    if (verifyToken(req)) { next()} else{
+    if (verifyToken(req)) { 
+        next()} 
+        else{
         res.send("you are not authenticated")
     }
 
@@ -27,12 +20,10 @@ export const verifyToken = (req:Request) => {
         let token= authorization.substring(7)
         try {
             jwt.verify(token, process.env.JWT_SECRET!);
-        return true;} 
-        catch { return false;
-
-        }
-
-    } else {
+        return true }        
+        catch { 
+            return false
+        }} else {
         
         return false;
     

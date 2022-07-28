@@ -6,6 +6,7 @@ import insertController from "../controller/insertController";
 import { registerController, usuarios  } from "../controller/registerController";
 //import { loginController } from "../controller/loginController";
 import { authMiddleware } from "../middleware/authjwt";
+import { loginController } from "../controller/loginController"
 
 
 const router = Router();
@@ -16,7 +17,7 @@ router.post('/exp', authMiddleware, insertController);
 router.delete('/exp/:id', authMiddleware, deleteController);
 router.put('/exp/:id', authMiddleware,updateController);
 router.post('/user/register', registerController );
-router.post('/user/login',  );
+router.post('/user/login', loginController );
 router.get('/user', usuarios);
 
 
