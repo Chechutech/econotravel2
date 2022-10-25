@@ -1,6 +1,6 @@
 # Econotravel2
 
-A tourism agency web for book sightseen experiencies in Catalunya.
+A tourism agency web for book sightseeing in experiences in Catalunya.
 This project was built with **React | Material UI | Node js | Express | Typesript | Jest | PostgreSQL**
 
 [Econotravel link](https://econotravelgrup4.herokuapp.com/)
