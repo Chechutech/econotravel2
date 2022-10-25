@@ -18,7 +18,7 @@ npm install
 ```bash
 npm start
 ```
-## ▶️ Run Server
+## ▶️ Run Server2
 
 ```bash
 npm run start
